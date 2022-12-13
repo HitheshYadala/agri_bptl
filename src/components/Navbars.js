@@ -118,9 +118,6 @@ function Navbars() {
 
   </ul>
 </nav>
-
-<h1> Responsive Dropdown Menu Multi Level Demo-Blogtdb </h1>
-
     </>
   )
 }
