@@ -12,6 +12,20 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.header-sec {
+  display: flex;
+}
+
+.header-carousel {
+  max-width: 70%;
+  margin: auto;
+}
+
+.carousel{
+  margin-left:"auto !important";
+  margin-right:"auto !important";
+}
+
 
 .App-header {
   background-color: #282c34;

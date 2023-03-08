@@ -2,6 +2,7 @@ import React from 'react'
 import "../styles/Navbar.css"
 import chevron from "../assets/chevron.svg"
 import logo from "../assets/clglogo.png"
+import { Link } from "react-router-dom";
 
 function Navbars() {
   return (
@@ -12,19 +13,19 @@ function Navbars() {
   <label style={{float:"right", backgroundColor:"#435426"}} for="drop" className="toggle">&#8801;</label>
  
   <input type="checkbox" id="drop" />
-  <ul class="menu">
+  <ul className="menu">
   
-    <li><a href="#">Home</a></li>
+    <li><Link to="/" >Home</Link></li>
     <li> 
       {/* <!-- First Tier Drop Down --> */}
-      <label for="drop-1" class="toggle">AboutUs +</label>
+      <label for="drop-1" className="toggle">AboutUs +</label>
       <a href="#">AboutUs</a>
       <input type="checkbox" id="drop-1"/>
       <ul>
-        <li className="middle"><a href="#">Historical background</a></li>
-        <li  className="middle"><a href="#">Vision and Mandate</a></li>
-        <li  className="middle"><a href="#">Organizational structure</a></li>
-        <li  className="middle"><a href="#">Status of accredation</a></li>
+        <li className="middle"><Link to="/HistoricalBackground" >Historical backgroun</Link></li>
+        {/* <li  className="middle"><Link to="/Vision & Mandate" >Vision and Mandate</Link></li> */}
+        <li  className="middle"><Link to="/Organizational Structure" >Organizational structure</Link></li>
+        <li  className="middle"><Link to="/Status Of Accredation" >Status of accredation</Link></li>
         
       </ul>
     </li>
@@ -33,18 +34,18 @@ function Navbars() {
     <li> 
       
       {/* <!-- First Tier Drop Down --> */}
-      <label for="drop-2" class="toggle">Administration +</label>
-      <a href="#">Administration</a>
-      <input type="checkbox" id="drop-2"/>
-      <ul>
+      <label for="drop-2" className="toggle">Administration</label>
+      <Link to="Administration">Administration</Link>
+      {/* <input type="checkbox" id="drop-2"/> */}
+      {/* <ul>
         <li><a href="#">Vice chancellor</a></li>
         <li><a href="#">Deans of Faculty</a></li>
         <li><a href="#">Asso. Dean</a></li>
 
         <li> 
           
-          {/* <!-- Second Tier Drop Down --> */}
-          <label for="drop-3" class="toggle">Supporting +</label>
+          
+          <label for="drop-3" className="toggle">Supporting +</label>
           <a href="#">Supporting</a>
           <input type="checkbox" id="drop-3"/>
           <ul>
@@ -56,14 +57,14 @@ function Navbars() {
             <li><a href="#">Transport Incharge</a></li>
           </ul>
         </li>
-      </ul>
+      </ul> */}
     </li>
 
 
     <li> 
       
       {/* <!-- First Tier Drop Down --> */}
-      <label for="drop-4" class="toggle">Academics +</label>
+      <label for="drop-4" className="toggle">Academics +</label>
       <a href="#">Academic</a>
       <input type="checkbox" id="drop-4"/>
       <ul>
@@ -72,7 +73,7 @@ function Navbars() {
         <li> 
           
           {/* <!-- Second Tier Drop Down --> */}
-          <label for="drop-9" class="toggle">Departments +</label>
+          <label for="drop-9" className="toggle">Departments +</label>
           <a href="#">Departments</a>
           <input type="checkbox" id="drop-9"/>
           <ul>
@@ -87,7 +88,7 @@ function Navbars() {
 
     <li> 
       {/* <!-- First Tier Drop Down --> */}
-      <label for="drop-5" class="toggle">Student's Welfare +</label>
+      <label for="drop-5" className="toggle">Student's Welfare +</label>
       <a href="#">Student's Welfare</a>
       <input type="checkbox" id="drop-5"/>
       <ul>

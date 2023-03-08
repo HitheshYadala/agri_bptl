@@ -83,13 +83,13 @@
     h1 {
       font-size: 14pt;
       font-weight: normal;
-      text-shadow: 0 0 .3em #000;
+      /* text-shadow: 0 0 .3em #000; */
       margin: 0 0 1em;
     }
   
     p {
       font-size: 11pt;
-      text-shadow: 0 0 .3em #000;
+      /* text-shadow: 0 0 .3em #000; */
       margin: 1em 0;
     }
     a {
@@ -116,7 +116,7 @@
 
 
       .video-container {
-        position: absolute;
+        /* position: absolute; */
         top: 0;
         bottom: 0;
         width: 100%;
@@ -132,5 +132,3 @@
       }
 
   }
-
-  

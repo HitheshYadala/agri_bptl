@@ -27,7 +27,7 @@ nav {
   padding: 10px;
   background-color: black;
   z-index: 5;
-  position: relative;
+  position: sticky;
 }
 
 #logo {
