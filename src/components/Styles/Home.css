@@ -1,0 +1,12 @@
+.messagenotice-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.NoticeDiv{
+    width: 48% !important;
+}
+
+.shifter{
+    width: 48% !important;
+}
