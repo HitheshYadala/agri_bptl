@@ -29,9 +29,11 @@ function Coursecounter() {
   return (
     <>
       <div
+      className="Vertical"
         style={{
           // display: "flex",
           width: "100%",
+          maxWidth:"100%",
           height: "auto",
           backgroundColor: "#0A2451",
           color: "whitesmoke",
@@ -42,6 +44,7 @@ function Coursecounter() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
+            marginBottom:"50px",
           }}
         >
           {content.map((item, ind) => {
@@ -70,6 +73,7 @@ function Coursecounter() {
                         scrollSpyDelay={500}
                         start={0}
                         end={numbers[ind]}
+                        duration={5}
                         delay={10}
                       >
                         {({ countUpRef }) => <span ref={countUpRef} />}
@@ -84,9 +88,11 @@ function Coursecounter() {
       </div>
 
       <div
+      className="Vertical"
         style={{
           // display: "flex",
           width: "100%",
+          maxWidth:"100%",
           height: "auto",
           backgroundColor: "whitesmoke",
           color: "#0A2451",
@@ -97,6 +103,7 @@ function Coursecounter() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-around",
+            marginBottom:"50px",
           }}
         >
           {faculty.map((item, ind) => {
@@ -124,6 +131,7 @@ function Coursecounter() {
                         scrollSpyOnce={true}
                         scrollSpyDelay={500}
                         start={0}
+                        duration={5}
                         end={calculations[ind]}
                         delay={10}
                       >

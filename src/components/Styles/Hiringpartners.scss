@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .marquee {
+    overflow: hidden;
+    // max-height: 100px;
+    margin: 3em auto;
+  }
+  
+  .marquee-content {
+    display: flex;
+    animation: scrolling 20s linear infinite;
+    &:hover {
+        animation-play-state: paused;
+      }
+  }
+
+  
+  .marquee-item {
+    flex: 0 0 16vw;
+    margin: 0 1vw;
+
+  /*   flex: 0 0 20vw; */
+  /*   margin: 0 2vw; */
+  }
+  
+  .marquee-item img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    max-height: 150px;
+  /*   padding: 0 20px; */
+  }
+
+  .Hiring-partners{
+    text-align: center;
+    padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+  }
+  
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translatex(-144vw); }
+  }
+  

@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import "../components/Styles/MessageShifter.css";
+import dean from "../assets/Dean.png"
+import assoDean from "../assets/AssoDean.png"
 
 function Messageshifter() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const testimonials = [
     {
       name: "Dr. A. MANI",
+      who : "Deans Message",
       position: "DEAN OF AGRI. ENGG & TECH",
-      photo:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6",
+      photo:dean,
       text: "Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla",
     },
     {
       name: "Dr. D.D.SMITH",
+      who : "Asso. Deans Message",
       position: "ASSOCIATE DEAN",
-      photo: "https://randomuser.me/api/portraits/women/44.jpg",
+      photo: assoDean,
       text: "Associate Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla",
     },
   ];
@@ -26,22 +29,22 @@ function Messageshifter() {
     return () => clearInterval(interval);
   }, [testimonialIndex]);
 
-  const { name, position, photo, text } = testimonials[testimonialIndex];
+  const { name, position, photo, text, who } = testimonials[testimonialIndex];
 
   return (
     <div>
+      
       <div className="testimonial-container">
         <div className="progress-bar"></div>
         <div className="fas fa-quote-left fa-quote"></div>
-
-
         <div className="fas fa-quote-right fa-quote"></div>
+        <h1>{who}</h1>
         <p className="testimonial">
           {text}
         </p>
         <div className="user">
           <img
-            src="https://randomuser.me/api/portraits/women/45.jpg"
+            src={photo}
             alt="user"
             className="user-image"
           />

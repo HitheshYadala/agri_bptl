@@ -5,6 +5,8 @@ import Noticeboard from "./Noticeboard";
 import "../components/Styles/Home.css"
 import Footer from "./Footer";
 import Coursecounter from "./Coursecounter";
+import PhotoMasionry from "./PhotoMasionry";
+import Hiringpartners from "./Hiringpartners";
 
 function Home() {
   return (
@@ -20,7 +22,10 @@ function Home() {
         </div>
         
       </div>
+      <PhotoMasionry />
+      <Hiringpartners />
       <Coursecounter />
+      
       <Footer />
     </>
   );

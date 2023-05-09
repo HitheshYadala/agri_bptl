@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
   },
   logoImg: {
     marginTop:"10px",
-    width : "70px",
-    height: "70px",
+    width : "100px",
+    height: "90px",
   }
 }));
 

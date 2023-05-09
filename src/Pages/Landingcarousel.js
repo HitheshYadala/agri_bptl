@@ -9,16 +9,27 @@ import four from "../assets/Landingpage/4.JPG";
 import five from "../assets/Landingpage/5.JPG";
 import six from "../assets/Landingpage/6.jpg";
 import seven from "../assets/Landingpage/7.jpg";
-import "../components/Styles/Landingcarousel.css"
+import "../components/Styles/Landingcarousel.css";
 
 class Landingcarousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 0,
+    };
+  }
   render() {
     let imageStack = [one, two, three, four, five, six, seven];
 
     return (
       <div className="main">
-        <Carousel showThumbs={false} infiniteLoop={true} dynamicHeight={false}>
-
+        <Carousel 
+          showThumbs={false} 
+          infiniteLoop={true} 
+          dynamicHeight={false}
+          autoPlay={true}
+          stopOnHover={false}
+          >
           <div className="carouselImg">
             <img src={one} />
           </div>
