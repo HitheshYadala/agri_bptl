@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../components/Styles/MessageShifter.css";
 import dean from "../assets/Dean.png"
-import assoDean from "../assets/AssoDean.png"
+import assoDean from "../assets/AssoDean.jpeg"
 
 function Messageshifter() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -14,11 +14,11 @@ function Messageshifter() {
       text: "Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla",
     },
     {
-      name: "Dr. D.D.SMITH",
+      name: "Dr D. D. Smith, M.Tech., Ph.D.",
       who : "Asso. Deans Message",
       position: "ASSOCIATE DEAN",
       photo: assoDean,
-      text: "Associate Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla Dean of Agriculture college Bapatla",
+      text: "Dr. NTR College of Agricultural Engineering, Bapatla had a humble beginning in the year 1983 in the premises of Agricultural College, Bapatla in the then Department of Agricultural Engineering.",
     },
   ];
 
@@ -32,7 +32,7 @@ function Messageshifter() {
   const { name, position, photo, text, who } = testimonials[testimonialIndex];
 
   return (
-    <div>
+    <div className="messageshifter-container">
       
       <div className="testimonial-container">
         <div className="progress-bar"></div>
@@ -40,7 +40,7 @@ function Messageshifter() {
         <div className="fas fa-quote-right fa-quote"></div>
         <h1>{who}</h1>
         <p className="testimonial">
-          {text}
+          {text}  <p><a style={{color:"gray", textDecoration:"none"}}href="#">Read more...</a></p>
         </p>
         <div className="user">
           <img
@@ -53,8 +53,6 @@ function Messageshifter() {
             <p className="role">{position}</p>
           </div>
         </div>
-
-
       </div>
     </div>
   );

@@ -1,0 +1,23 @@
+.construction-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .construction-image {
+    max-width: 300px;
+  }
+  
+  // h1 {
+  //   font-size: 4rem;
+  //   margin: 1rem 0;
+  // }
+  
+  p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }

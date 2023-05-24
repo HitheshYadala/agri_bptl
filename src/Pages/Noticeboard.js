@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import NewsTicker from "react-advanced-news-ticker";
-import "../components/Styles/Hiringpartners.scss"
+import "../components/Styles/Hiringpartners.scss";
 
-export default function Events() {
+export default function NoticeBoard() {
   const [data, setData] = useState([
     {
       id: `bulletItem_1`,
@@ -20,25 +20,12 @@ export default function Events() {
   ]);
 
   return (
-    <>
-    
-    <div>
-    <h1 className="Hiring-partners" style={{paddingLeft:"28px", textAlign:"left", paddingTop:"10px"}}>Notice Board</h1>
+    <div className="notice-board-container">
+      <h1 className="Hiring-partners">Notice Board</h1>
       <NewsTicker
-        style={{
-          color: "green",
-          fontWeight: "bold",
-          // float:"left",
-          textAlign: "left",
-          paddingBottom: "10px",
-          paddingTop: "20px",
-          marginTop: "20px",
-          zindex: "1",
-        }}
-        className="myClassName1"
+        style={{ color: "green", fontWeight: "bold" , margin:"auto", display:"table",width:"100%"}}
+        className="news-ticker"
         maxRows={12}
-        // duration={15}
-        //   hasMoved = {this.updateInfos}
         speed={1000}
         pauseOnHover={true}
         started={() => {
@@ -48,38 +35,30 @@ export default function Events() {
           console.log("react advanced news ticker has been paused.");
         }}
       >
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
-          1st year Engineering results
-        </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
-          2nd year engineering results
-        </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
-          3rd year engineering results
-        </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
+        <div className="news-item space">1st year Engineering results</div>
+        <div className="news-item space">2nd year engineering results</div>
+        <div className="news-item space">3rd year engineering results</div>
+        <div className="news-item space">
           University calling for compond wall bond click here
         </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
+        <div className="news-item space">
           Share your ideas for this year fest in Agriculture university
         </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
+        <div className="news-item space">
           4th year engineering supplimentary exams time table
         </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
+        <div className="news-item space">
           Selected candidates for XYZ company please check here
         </div>
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
+        <div className="news-item space">
           Hostel fee structure changed for 2023-24 click here for more details
         </div>
-       
-        <div style={{ padding: "5px 0px 5px 0px" }} className="space">
+        <div className="news-item space">
           Convocation dates announced click here
         </div>
 
         {console.log(data)}
       </NewsTicker>
     </div>
-    </>
   );
 }

@@ -1,12 +1,33 @@
-.messagenotice-wrapper{
-    display: flex;
-    flex-direction: row;
-}
+@media (min-width: 801px) {
+    /* CSS styles for large screens and above go here */
+
+    .messagenotice-wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    /* styles for tablet and below screens */
+    .messagenotice-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+  }
 
 .NoticeDiv{
-    width: 48% !important;
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .shifter{
-    width: 48% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.HeaderImg{
+    height:"10em";
+    width:"100%";
+    padding:"4px"
 }

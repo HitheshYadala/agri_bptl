@@ -1,20 +1,13 @@
-* {
-    box-sizing: border-box;
-  }
   
-  body {
-    margin: 0;
-  }
-  
-  .marquee {
+  .marqueey {
     overflow: hidden;
     // max-height: 100px;
     margin: 3em auto;
   }
   
-  .marquee-content {
+  .marquee-contenty {
     display: flex;
-    animation: scrolling 20s linear infinite;
+    animation: scrolling-2 20s linear infinite;
     &:hover {
         animation-play-state: paused;
       }
@@ -23,7 +16,7 @@
 
 
   
-  .marquee-item {
+  .marquee-itemy {
     flex: 0 0 16vw;
     margin: 0 1vw;
 
@@ -31,7 +24,7 @@
   /*   margin: 0 2vw; */
   }
   
-  .marquee-item img {
+  .marquee-itemy img {
     display: block;
     width: 100%;
     max-width: 200px;
@@ -39,7 +32,7 @@
   /*   padding: 0 20px; */
   }
 
-  .Hiring-partners{
+  .Hiring-partnersy{
     text-align: center;
     padding-top: 50px;
     color: #0A2451;
@@ -48,7 +41,7 @@
     letter-spacing: 5px;
   }
 
-  .photogallery{
+  .photogalleryy{
 
       text-align: center;
       padding-top: 8%;
@@ -59,8 +52,10 @@
   
   }
   
-  @keyframes scrolling {
-    0% { transform: translateX(0); }
-    100% { transform: translatex(-100vw); }
+  @keyframes scrolling-2 {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(0); }
+    /* Set the duration to be the same as scrolling-1 */
+    // animation-duration: 20s;
   }
   

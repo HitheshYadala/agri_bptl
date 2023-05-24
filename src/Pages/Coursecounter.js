@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import "../components/Styles/counter.css";
+// import "../components/Styles/custom.css";
 
 function Coursecounter() {
   const [counter, setCounter] = useState(0);
@@ -9,7 +10,7 @@ function Coursecounter() {
     "PG Courses",
     "P.hd Courses",
     "UG Strength",
-    "PG/P.hd strength",
+    "PG/Ph.D strength",
     "Hostels boys/girls",
   ]);
 
@@ -18,53 +19,32 @@ function Coursecounter() {
   const [faculty, setFaculty] = useState([
     "Teaching Faculty",
     "Non-Teaching Faculty",
-    "B.tech 1st-Year(B+G)",
-    "B.tech 2nd-year(B+G)",
-    "B.tech 3rd-year(B+G)",
-    "B.tech 4th-year(B+G)"
+    "B.Tech 1st-Year(B+G)",
+    "B.Tech 2nd-year(B+G)",
+    "B.Tech 3rd-year(B+G)",
+    "B.Tech 4th-year(B+G)"
   ]);
 
   const [calculations , setCalculations] = useState(["25","31","37","82","55","60"])
 
   return (
     <>
-      <div
-      className="Vertical"
-        style={{
-          // display: "flex",
-          width: "100%",
-          maxWidth:"100%",
-          height: "auto",
-          backgroundColor: "#0A2451",
-          color: "whitesmoke",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            marginBottom:"50px",
-          }}
-        >
+    <h1 className="trackrecord">Track Record</h1>
+      <div className="Vertical blue">
+        <div style={{backgroundColor:"#0A2451", color:"whitesmoke"}} className="Column">
           {content.map((item, ind) => {
             const [heading, ...subheadings] = item.split(" ");
             return (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+              <div className="Row">
                 {subheadings.map((subheading) => (
-                  <div>
-                    <h2 style={{ fontSize: "36px", textAlign: "center" }}>
+                  <div className="Counter">
+                    <h2 style={{color:"whitesmoke"}} className="Heading">
                       {heading}
-                      <div style={{ fontSize: "20px" }}>{subheading}</div>
+                      <div style={{color:"whitesmoke"}} className="Subheading">{subheading}</div>
                     </h2>
 
-                    <h1 style={{ textAlign: "center" }}>
+                    <h1 style={{color:"wheat"}} className="Count">
+                      
                       <CountUp
                         className="count"
                         useEasing={true}
@@ -87,43 +67,20 @@ function Coursecounter() {
         </div>
       </div>
 
-      <div
-      className="Vertical"
-        style={{
-          // display: "flex",
-          width: "100%",
-          maxWidth:"100%",
-          height: "auto",
-          backgroundColor: "whitesmoke",
-          color: "#0A2451",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            marginBottom:"50px",
-          }}
-        >
+      <div className="Vertical white">
+        <div style={{color:"whitesmoke"}} className="Column">
           {faculty.map((item, ind) => {
             const [heading, ...subheadings] = item.split(" ");
             return (
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
+              <div className="Row">
                 {subheadings.map((subheading) => (
-                  <div>
-                    <h2 style={{ fontSize: "36px", textAlign: "center" }}>
+                  <div className="Counter">
+                    <h2 className="Heading">
                       {heading}
-                      <div style={{ fontSize: "20px" }}>{subheading}</div>
+                      <div className="Subheading">{subheading}</div>
                     </h2>
 
-                    <h1 style={{ textAlign: "center" }}>
+                    <h1 className="Count">
                       <CountUp
                         className="count"
                         useEasing={true}

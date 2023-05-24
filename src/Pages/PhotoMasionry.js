@@ -3,8 +3,8 @@ import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { images, CustomImage } from "./images";
-import "../components/Styles/Hiringpartners.scss";
-
+// import "../components/Styles/Hiringpartners.scss";
+import "../components/Styles/masionry.scss"
 export default function App() {
   const [index, setIndex] = useState(-1);
 
@@ -21,8 +21,8 @@ export default function App() {
 
   return (
     <>
-      <h1 className="Hiring-partners">Photo Gallery</h1>
-      <div style={{ width: "85%", margin: "auto" }}>
+      <h1 className="photogallery">Photo Gallery</h1>
+      <div className="gallery-container">
         <Gallery
           images={images}
           onClick={handleClick}

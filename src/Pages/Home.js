@@ -7,10 +7,14 @@ import Footer from "./Footer";
 import Coursecounter from "./Coursecounter";
 import PhotoMasionry from "./PhotoMasionry";
 import Hiringpartners from "./Hiringpartners";
+import TendersandEvents from "./TendersandEvents";
+import Skilldevelopment from "./Skilldevelopment";
+// import headerImg from "../assets/HeaderImg.jpg"
 
 function Home() {
   return (
     <>
+    {/* <img style={{height:"10em",width:"100%", padding:"4px"}} className="HeaderImg" src= {headerImg}/> */}
       <Landingcarousel />
       <div className="messagenotice-wrapper">
         <div className="shifter">
@@ -22,9 +26,15 @@ function Home() {
         </div>
         
       </div>
-      <PhotoMasionry />
+      
       <Hiringpartners />
+      <Skilldevelopment />
       <Coursecounter />
+
+      <TendersandEvents />
+      <div style={{paddingBottom:"30px"}}>
+      <PhotoMasionry />
+      </div>
       
       <Footer />
     </>

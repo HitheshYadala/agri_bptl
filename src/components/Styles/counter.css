@@ -1,6 +1,118 @@
-.CounterContainer{
+.Vertical {
     display: flex;
     flex-direction: row;
-    background-color: "red";
-    /* padding: 40px auto; */
-};
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  .Vertical > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  
+  @media (max-width: 1440px) {
+    .Vertical > div {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .Vertical > div {
+      flex-direction: column;
+    }
+  }
+  
+  .Vertical > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .Vertical > div > div h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+  }
+  
+  .Vertical > div > div h2 div {
+    font-size: 20px;
+    color: whitesmoke;
+  }
+  
+  .Vertical > div > div h1 {
+    font-size: 36px;
+    color: whitesmoke;
+    margin-top: 0;
+  }
+  
+  .Vertical > div:nth-of-type(2) {
+    background-color: blue;
+  }
+  
+  .Vertical > div:nth-of-type(3) {
+    background-color: red;
+  }
+  
+  .Vertical > div:last-child {
+    background-color: whitesmoke;
+    color: #0A2451;
+  }
+  
+  .Vertical > div:last-child h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #0A2451;
+  }
+  
+  .Vertical > div:last-child h2 div {
+    font-size: 20px;
+    color: #0A2451;
+  }
+  
+  .Vertical > div:last-child h1 {
+    font-size: 36px;
+    color: #0A2451;
+    margin-top: 0;
+  }
+  
+  @media (max-width: 1440px) {
+    .Vertical > div:last-child > div {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .Vertical > div:last-child > div {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 1440px) {
+    .Vertical > div:last-child > div:nth-child(n+4) {
+      margin-top: 50px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .Vertical > div:last-child > div:nth-child(n+4) {
+      margin-top: 0;
+    }
+  }
+  
+
+  .trackrecord{
+    text-align: center;
+    padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+  }

@@ -1,0 +1,18 @@
+.gallery-container {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .rg-image {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .rg-image {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  

@@ -1,0 +1,313 @@
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.ntrImg{
+  width: 100% !important;
+  height: auto;
+}
+
+
+.raisebutton{  
+    font-size: 20px !important;
+    color: whitesmoke;
+    
+  
+  /* &:hover
+  &:focus { 
+    border-color: #0A2451;
+    color: var(--color);
+  transition: 0.5s;
+  } */
+}
+
+.context {
+    border: 2px solid #0A2451; /* Set border color */
+    color: #0A2451; /* Set text color */
+    background-color: white; /* Set background color */
+ }
+
+.context:hover {
+    background-color: #0A2451;
+    color: whitesmoke;
+  }
+
+.context:focus {
+    background-color: #0A2451;
+    color: whitesmoke;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+
+.container{
+    padding-left: 20px;
+    justify-content: center;
+}
+  
+.button-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    .button-row {
+      flex-direction: column;
+      align-items: center;
+      padding:10px
+    }
+
+    .context {
+        border: 2px solid #0A2451; /* Set border color */
+        color: #0A2451; /* Set text color */
+        background-color: whitesmoke; /* Set background color */
+        width:270px;
+        padding:10px;
+        margin:8px;
+     }
+
+     .text-with-images {
+        flex-direction: column;
+      }
+    
+      .text-container {
+        order: 2;
+      }
+    
+      .image-container {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh; /* Adjust the height as needed */
+        /* Add any additional styles you need */
+        width: 100%;
+        height: auto;
+      }
+
+      .image {
+        max-width: 100%;
+        width:100%;
+      }
+
+      .TableImg{
+        width: 100% !important;
+      }
+     
+  }
+
+.sub_heading{
+    text-align: center;
+    padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+}
+
+
+
+.text-with-images {
+    display: flex;
+    align-items: center;
+    /* Add any additional styles you need */
+  }
+  
+  .text-container {
+    flex: 1;
+    /* Add styles for the text container if needed */
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+     /* Adjust the height as needed */
+    /* Add any additional styles you need */
+  }
+  
+  .imageStructure {
+    max-width: 100%;
+    max-height: 100%;
+    /* Add styles for the image if needed */
+  }
+  
+  
+  .image {
+    max-width: 60%;
+    width:60%;
+    height: auto;
+    margin: auto;
+    /* Add styles for the image if needed */
+  }
+  
+
+
+  /* //PDF DESIGNS// */
+
+  /* For web view */
+.pdf-viewer-container {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    margin-top: 10%;
+  }
+  
+  .pdf-viewer-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pdf-viewer-button:hover {
+    background-color: #0056b3;
+  }
+
+  .ItemsContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon{
+    margin: auto;
+    padding-bottom: 10px;
+  }
+  
+  /* For mobile view */
+  @media (max-width: 768px) {
+    .pdf-viewer-container {
+      text-align: center;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      padding:30px;
+    }
+  
+    .pdf-viewer-button {
+      padding: 8px 16px;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+.text_aboutus{
+    font-size: 18px;
+}
+
+/* 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PP Eiko';
+  transition: 2s ease-out;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.sidesection{
+  height: 500vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin: 0px;
+}
+
+.sidesection section{
+  height: 100%;
+  width: 85%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 500;
+  background: #E3E0D8;
+  color: #211C19;
+  text-transform: uppercase;
+}
+
+
+
+.current{
+  font-weight: 500;
+  color: rgba(33,28,25,1)!important;
+}
+
+.progress{
+  position: fixed;
+  top: 50%;
+  left: 75px;
+  transform: translateY(-50%);
+
+}
+
+.progress ul{
+  list-style: none;
+  height: 200px;
+  width: 80px;
+  display: flex;
+  align-items: left;
+  justify-content: space-around;
+  flex-flow: column;
+  position: relative;
+}
+
+.progress ul li{
+  z-index: 1;
+}
+
+.progress ul li a{
+  
+  text-decoration: none;
+  width: 100%;
+  font-weight: 500;
+  background: white;
+  color: rgba(33,28,25,0.6);
+  border: 1px solid #211C19;
+  border-radius: 12px;
+  padding: 8px;
+  letter-spacing: 1px;
+}
+
+.progress ul li a:hover{
+  color: rgba(33,28,25,1);
+}
+
+ul .sideline{
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  height: 0px;
+  width: 4px;
+  background: #514A46;
+  border-radius: 20px;
+  left: -25px;
+}
+
+
+
+
+
+
+ */

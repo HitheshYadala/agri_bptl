@@ -1,0 +1,166 @@
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+
+// Animate the size, inside
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+// Animate the size, outside
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+// Stack multiple shadows, one from the left, the other from the right
+.close:hover,
+.close:focus {
+  box-shadow: 
+    inset -3.5em 0 0 0 var(--hover),
+    inset 3.5em 0 0 0 var(--hover);  
+}
+
+// Size can also be negative; see how it's smaller than the element
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+// Animating from the bottom
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+// And from the left
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+// Multiple shadows, one on the outside, another on the inside
+.offset {  
+  box-shadow: 
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+  
+  &:hover,
+  &:focus {
+    box-shadow: 
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+  // Make a map with the class names and matching colors
+$colors: (
+  fill: #a972cb,
+  pulse: #ef6eae, 
+  close: #ff7f82, 
+  raise: #0A2451, 
+  up: #e4cb58, 
+  slide: #8fc866, 
+  offset: #19bc8b
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+  // Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 0deg)};
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+.raisebutton{  
+    font-size: 20px !important;
+    color: whitesmoke;
+  
+  
+  &:hover
+  &:focus { 
+    border-color: #0A2451;
+    color: var(--color);
+  transition: 0.5s;
+  }
+}
+
+//=== Pen styling, ignore
+// body {
+//   color: #fff;
+//   background: hsl(227, 10%, 10%);
+//   font: 300 1em 'Fira Sans', sans-serif;
+  
+//   // Center everything ever
+//   justify-content: center;
+//   align-content: center;
+//   align-items: center;
+//   text-align: center;
+//   min-height: 100vh;
+//   display: flex;
+// }
+
+// Basic button styles
+.raisebutton {
+  background: #0A2451;
+  border: 2px solid;
+//   margin-bottom: 10px;
+  height: 50px;
+  font: inherit;
+  line-height: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  /* Styles for mobile screens */
+  .raisebutton {
+    background: #0A2451;
+    border: 2px solid;
+    height: 50px;
+    font: inherit;
+    line-height: 1;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .box_width{
+    width: 90% !important;
+    justify-content: space-between !important;
+  }
+}
+
+
+.boxShadow{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+  }
+
+.Announcements{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+  }

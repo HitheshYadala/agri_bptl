@@ -1,0 +1,225 @@
+/* Academic.scss */
+#wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #header {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  #container {
+    display: flex;
+    // display: contents;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 20px;
+  }
+  
+  #nav-quick {
+    display: "flex";
+    position: sticky;
+    // z-index: 10;
+    top: 250px;
+    // right: 40px;
+    // width: 200px;
+  }
+  
+  .quick-menu {
+    padding: 8px 0;
+  }
+  
+  .quick-1st > li {
+    position: relative;
+    font-size: 14px;
+  }
+  
+  .quick-1st > li:not(:last-child):before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 3px;
+    width: 1px;
+    height: 100%;
+    background-color: #e0e0e0;
+  }
+  
+  .quick-1st > li > a {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px 8px 18px;
+    line-height: 1.5;
+    color: #222;
+    word-break: keep-all;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-1st > li > a:before {
+    content: '';
+    position: absolute;
+    z-index: 11;
+    top: 14px;
+    left: -1px;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-1st > li:hover > a,
+  .quick-1st > li.active > a {
+    color: #007dce;
+  }
+  
+  .quick-1st > li:hover > a:before,
+  .quick-1st > li.active > a:before {
+    background-color: #007dce;
+  }
+  
+  #content {
+    margin-top: 20px;
+    width: 100%;
+    float: right !important;
+  }
+  
+  .page-section {
+    margin-bottom: 6%;
+    // padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .sub_heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text_academic {
+    // margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    
+  }
+
+  .imageAcademic{
+    width: 60%;
+    height: 60%;
+    display: flex;
+    margin:auto
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+  }
+  
+  .text-with-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-with-image .image {
+    // margin: 0px;
+
+    // width: 100px !important;
+    // height: 100px !important;
+  }
+  
+  .text-with-image h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    #container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .quick-1st {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .quick-1st li {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #container {
+      padding: 10px;
+      display: contents;
+    }
+  
+    .quick-menu {
+      flex-wrap: wrap;
+    }
+  
+    .quick-1st li {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      padding: 2px;
+      font-size: 12px;
+    }
+  
+    .text-with-image .image {
+      width: 50%;
+      height: 50%;
+      display:flex;
+      margin:auto
+    }
+
+    .text-with-image{
+        flex-direction: column;
+    }
+  
+    .text-with-image h3 {
+    //   font-size: 14px;
+    text-align: center;
+    }
+
+    .ImagesContainers{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .img1{
+        margin:10px;
+        // width: 50%;
+        // display: flex;
+        // flex-direction: row;
+    }
+
+    .img2{
+        margin:10px;
+        // width: 50%;
+        // display: flex;
+        // flex-direction: row;
+    }
+
+    .text_academic {
+        margin-bottom: 20px;
+        margin:16px;
+        text-align: center;
+      }
+  }
+  
+  /* Add your styles for other sections and elements as needed */
+  

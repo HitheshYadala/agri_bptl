@@ -12,9 +12,16 @@ import Academic from "./Pages/Academic";
 import Studentwelfare from "./Pages/Studentwelfare";
 import Contactus from "./Pages/Contactus";
 import Publications from "./Pages/Publications";
+import ScrollToTopButton from "./Pages/ScrolltoTop";
 
 function App() {
   return (
+    <>
+
+<div>
+      {/* your app content here */}
+      <ScrollToTopButton />
+    </div>
     <Router>
       <Navbar />
       <Routes>
@@ -27,6 +34,7 @@ function App() {
         <Route path="/contactus" element={<Contactus />} />
       </Routes>
     </Router>
+    </>
   );
 }
 export default App;
