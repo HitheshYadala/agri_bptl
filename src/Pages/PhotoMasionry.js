@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Gallery } from "react-grid-gallery";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
+// import img1 from "../assets/Dean.png";
+// import img2 from "../assets/AssoDean.jpeg"
 import { images, CustomImage } from "./images";
 // import "../components/Styles/Hiringpartners.scss";
 import "../components/Styles/masionry.scss"
@@ -19,7 +21,10 @@ export default function App() {
   const handleMovePrev = () => setIndex(prevIndex);
   const handleMoveNext = () => setIndex(nextIndex);
 
+
+
   return (
+
     <>
       <h1 className="photogallery">Photo Gallery</h1>
       <div className="gallery-container">

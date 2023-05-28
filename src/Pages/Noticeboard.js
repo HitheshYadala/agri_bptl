@@ -35,8 +35,8 @@ export default function NoticeBoard() {
           console.log("react advanced news ticker has been paused.");
         }}
       >
-        <div className="news-item space">1st year Engineering results</div>
-        <div className="news-item space">2nd year engineering results</div>
+        <div className="news-item space">College day and Hostel day Celebrations 2023 to be held on 29.05.2023</div>
+        {/* <div className="news-item space">2nd year engineering results</div>
         <div className="news-item space">3rd year engineering results</div>
         <div className="news-item space">
           University calling for compond wall bond click here
@@ -55,7 +55,7 @@ export default function NoticeBoard() {
         </div>
         <div className="news-item space">
           Convocation dates announced click here
-        </div>
+        </div> */}
 
         {console.log(data)}
       </NewsTicker>

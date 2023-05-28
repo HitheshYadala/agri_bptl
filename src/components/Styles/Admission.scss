@@ -1,0 +1,50 @@
+.imageGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    width: 65%;
+    justify-content: center;
+    margin:auto,
+  }
+
+  .imageGridContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .imageWrapper {
+    grid-column: span 4;
+    margin:10px
+
+  }
+  
+  .aspectRatioWrapper {
+    position: relative;
+    padding-bottom: 100%;
+  }
+  
+  .aspectRatioWrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .admissionPage_headings{
+    text-align: center;
+    padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+}
+  
+  @media (max-width: 767px) {
+    .imageWrapper {
+      grid-column: span 12;
+    }
+  }
+  

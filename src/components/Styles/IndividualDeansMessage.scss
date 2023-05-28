@@ -1,0 +1,50 @@
+.DeansImages{
+    align-items: center;
+    width: 350px;
+    height: 400px;
+    // padding:50px 50px 10px 50px;
+    margin: auto;
+    justify-content: center;
+}
+
+.Deans_description{
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+    padding:50px
+}
+
+.theContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.individualPage_headings{
+    text-align: center;
+    padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+}
+
+.Names{
+    text-align: center;
+    // padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+    font-size:medium;
+    font-weight: bold;
+}
+
+.positions{
+    text-align: center;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+    font-size:small;
+    font-weight: bold;
+}

@@ -13,6 +13,7 @@ import Studentwelfare from "./Pages/Studentwelfare";
 import Contactus from "./Pages/Contactus";
 import Publications from "./Pages/Publications";
 import ScrollToTopButton from "./Pages/ScrolltoTop";
+import IndividualDeansMessage from "./Pages/IndividualDeansMessage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/studentwelfare" element={<Studentwelfare />} />
         <Route path="/publications" element={<Publications />} />
         <Route path="/contactus" element={<Contactus />} />
+        <Route path="/individualPage" element={<IndividualDeansMessage />} />
       </Routes>
     </Router>
     </>

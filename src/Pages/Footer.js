@@ -37,14 +37,20 @@ function Footer() {
               <div className="col-md-4">
                 <h4 className="first-latter pb-1">Registered Office</h4>
                 <p className="p_text">
-                  WF2F+CC8, Maddiboinavaripalem, Bapatla, Andhra Pradesh 522101
+                NH 214 A, Karlapalem road, Guntur District, Bapatla, Andhra Pradesh 522101
+                </p>
+
+                <p className="p_text">
+                Dr. NTR College of Agricultural Engineering
+Acharya NG Ranga Agricultural University
+Bapatla- 522 101, Bapatla (Dist), Andhra Pradesh
                 </p>
               </div>
 
               <div className="col-md-2"></div>
               <div className="col-md-4">
                 <h4 className="first-latter pb-1">Contact Details</h4>
-                <p className="p_text">Ph : 0864 3224023</p>
+                <p className="p_text">Ph : 0864-3222851</p>
                 {/* <p  style={{fontSize:"14px"}}>email : ngranga@example.com</p> */}
               </div>
             </div>

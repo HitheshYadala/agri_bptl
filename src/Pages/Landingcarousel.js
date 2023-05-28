@@ -4,11 +4,13 @@ import { Carousel } from "react-responsive-carousel";
 import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
 import one from "../assets/Landingpage/1.jpg";
 import two from "../assets/Landingpage/2.JPG";
-import three from "../assets/Landingpage/3.JPG";
+import three from "../assets/Landingpage/3.png";
 import four from "../assets/Landingpage/4.JPG";
 import five from "../assets/Landingpage/5.JPG";
 import six from "../assets/Landingpage/6.jpg";
 import seven from "../assets/Landingpage/7.jpg";
+import eight from "../assets/Landingpage/8.JPG";
+import nine from "../assets/Landingpage/9.png";
 import "../components/Styles/Landingcarousel.css";
 
 class Landingcarousel extends Component {
@@ -19,7 +21,7 @@ class Landingcarousel extends Component {
     };
   }
   render() {
-    let imageStack = [one, two, three, four, five, six, seven];
+    let imageStack = [one, two, three, four, five, six, seven, eight, nine];
 
     return (
       <div className="main">
@@ -56,6 +58,14 @@ class Landingcarousel extends Component {
 
           <div className="carouselImg">
             <img src={seven} />
+          </div>
+
+          <div className="carouselImg">
+            <img src={eight} />
+          </div>
+
+          <div className="carouselImg">
+            <img src={nine} />
           </div>
         </Carousel>
       </div>
