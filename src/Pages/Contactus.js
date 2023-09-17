@@ -1,14 +1,27 @@
-import { Typography } from "@material-ui/core";
-import "../components/Styles/common.scss"
-import constructionImg from "../assets/underConstruction.png"
+import "../components/Styles/common.scss";
+import "../components/Styles/Contactus.scss";
+import cu from "../assets/contactus.png";
+import React, { useState } from "react";
 
 function Contactus() {
+  // return (
+  //   <div>
+  //     <img className="contactimage" src={cu} alt="Image" />
+  //   </div>
+  // );
+
+  const [showImage, setShowImage] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowImage(true);
+  };
+
   return (
-    <div className="construction-container">
-      <img src={constructionImg} alt="construction" className="construction-image" />
-      <h1>ContactUs Page is Under Construction</h1>
-      <p>We are working on something awesome. We'll be here soon.</p>
+    <div className="container">
+      {!showImage && <button onClick={handleButtonClick} className="contactbutton">Careers</button>}
+      {showImage && <img className="contactimage" src={cu} alt="Image" />}
     </div>
   );
 }
+
 export default Contactus;

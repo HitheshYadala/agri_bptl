@@ -16,49 +16,49 @@ function Skilldevelopment() {
   return (
     <div>
       <h1 className="Hiring-partnersy">Training & Skill development</h1>
-      <div class="marqueey">
-        <div class="marquee-contenty">
-          <div class="marquee-itemy">
+      <div className="marqueey">
+        <div className="marquee-contenty">
+          <div className="marquee-itemy">
             <img src={p8} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p9} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p10} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p11} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p16} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p17} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p18} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p19} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p20} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p21} alt="" />
           </div>
 
-          <div class="marquee-itemy">
+          <div className="marquee-itemy">
             <img src={p22} alt="" />
           </div>
         </div>

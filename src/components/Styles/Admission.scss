@@ -1,50 +1,101 @@
 .imageGrid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 10px;
-    width: 65%;
-    justify-content: center;
-    margin:auto,
-  }
-
-  .imageGridContainer{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .imageWrapper {
-    grid-column: span 4;
-    margin:10px
-
-  }
-  
-  .aspectRatioWrapper {
-    position: relative;
-    padding-bottom: 100%;
-  }
-  
-  .aspectRatioWrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .admissionPage_headings{
-    text-align: center;
-    padding-top: 50px;
-    color: #0A2451;
-    text-decoration: underline;
-    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
-    letter-spacing: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
 }
-  
-  @media (max-width: 767px) {
-    .imageWrapper {
-      grid-column: span 12;
-    }
+
+// .administration_images1{
+//   width: 50%;
+//   height: 50%;
+// }
+
+.imageGrid1 {
+  display: flex;
+
+  // flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imageGridContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  margin: 10px;
+  flex-basis: calc(33.33% - 20px);
+
+  // flex-grow: 1;
+}
+
+.imageWrapper1 {
+  margin: 10px;
+  flex-basis: calc(33.33% - 20px);
+  // flex-grow: 1;
+}
+
+.aspectRatioWrapper {
+  position: relative;
+  padding-bottom: 100%;
+
+  width: 90%;
+  // height: 80%;
+}
+
+.imageMatter{
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  // margin: 0%;
+}
+
+.aspectRatioWrapper1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 25%;
+}
+
+.aspectRatioWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// .administration_images1 {
+//   width: 440px;
+//   height: 440px;
+// }
+
+.administration_images1 .administration_images1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3% !important;
+  height:3% !important;
+  margin: auto;
+  object-fit: cover;
+}
+
+.admissionPage_headings {
+  text-align: center;
+  padding-top: 50px;
+  color: #0A2451;
+  text-decoration: underline;
+  text-shadow: 2px 4px 4px rgba(46, 91, 173, 0.6);
+  letter-spacing: 5px;
+}
+
+@media (max-width: 767px) {
+  .imageWrapper {
+    flex-basis: 100%;
   }
-  
+}

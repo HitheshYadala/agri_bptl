@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "../components/Styles/Aboutus.css";
 import tableImg from "../assets/TableImg.png";
 import img1 from "../assets/Image1.jpeg";
@@ -11,11 +11,9 @@ import SSRCollege from "../assets/SSRCollege.pdf";
 import SSR_Btech from "../assets/SSR_Btech.pdf";
 import SSR_Mtech from "../assets/SSR_Mtech.pdf";
 import SSR_phd from "../assets/SSR_Phd.pdf";
-import { BiArrowToBottom , BiItalic, BiBuildings } from "react-icons/bi";
+import { BiArrowToBottom, BiItalic, BiBuildings } from "react-icons/bi";
 import { BsFillHouseGearFill, BsFillTrophyFill } from "react-icons/bs";
 import { AiOutlineMedium, AiFillTrophy } from "react-icons/ai";
-
-
 
 const handleOpenPdf = (pdfUrl) => () => {
   console.log(pdfUrl);
@@ -217,53 +215,58 @@ function Aboutus() {
       case "button4":
         return (
           <div className="pdf-viewer-container">
-
             <div className="ItemsContainer">
               <BiItalic className="icon" size="7em" color="#0A2451" />
-              <button className="pdf-viewer-button" onClick={handleOpenPdf(icarnotification)}>
+              <button
+                className="pdf-viewer-button"
+                onClick={handleOpenPdf(icarnotification)}
+              >
                 ICAR Notification.pdf
               </button>
             </div>
 
             <div className="ItemsContainer">
               <BiBuildings className="icon" size="7em" color="#0A2451" />
-            <button
-              className="pdf-viewer-button"
-              onClick={handleOpenPdf(SSRCollege)}
-            >
-              SSR_College.pdf
-            </button>
+              <button
+                className="pdf-viewer-button"
+                onClick={handleOpenPdf(SSRCollege)}
+              >
+                SSR_College.pdf
+              </button>
             </div>
 
-
             <div className="ItemsContainer">
-              <BsFillHouseGearFill className="icon" size="7em" color="#0A2451" />
-            <button
-              className="pdf-viewer-button"
-              onClick={handleOpenPdf(SSR_Btech)}
-            >
-              SSR Btech.pdf
-            </button>
+              <BsFillHouseGearFill
+                className="icon"
+                size="7em"
+                color="#0A2451"
+              />
+              <button
+                className="pdf-viewer-button"
+                onClick={handleOpenPdf(SSR_Btech)}
+              >
+                SSR Btech.pdf
+              </button>
             </div>
 
             <div className="ItemsContainer">
               <AiOutlineMedium className="icon" size="7em" color="#0A2451" />
-            <button
-              className="pdf-viewer-button"
-              onClick={handleOpenPdf(SSR_Mtech)}
-            >
-              SSR_Mtech.pdf
-            </button>
+              <button
+                className="pdf-viewer-button"
+                onClick={handleOpenPdf(SSR_Mtech)}
+              >
+                SSR_Mtech.pdf
+              </button>
             </div>
 
             <div className="ItemsContainer">
               <AiFillTrophy className="icon" size="7em" color="#0A2451" />
-            <button
-              className="pdf-viewer-button"
-              onClick={handleOpenPdf(SSR_phd)}
-            >
-              SSR_Phd.pdf
-            </button>
+              <button
+                className="pdf-viewer-button"
+                onClick={handleOpenPdf(SSR_phd)}
+              >
+                SSR_Phd.pdf
+              </button>
             </div>
           </div>
         );
@@ -314,9 +317,6 @@ function Aboutus() {
 }
 
 export default Aboutus;
-
-
-
 
 // function throttle(fn, wait) {
 //   let time = Date.now();
@@ -373,7 +373,7 @@ export default Aboutus;
 //     <div>
 //       <div className="sidesection">
 //         <section id="sec1">
-//          <div> 
+//          <div>
 //         <h2 className="sub_heading">Historical Background</h2>
 //             <p className="text_aboutus">
 //               Achaya NG Ranga Agricultural University (earlier Andhra Pradesh
@@ -565,7 +565,6 @@ export default Aboutus;
 // </button>
 // </div>
 
-
 // <div className="ItemsContainer">
 //   <BsFillHouseGearFill className="icon" size="7em" color="#0A2451" />
 // <button
@@ -599,7 +598,6 @@ export default Aboutus;
 //         </section>
 //       </div>
 
-      
 //       <div>
 //       <div className="progress">
 //         <ul>

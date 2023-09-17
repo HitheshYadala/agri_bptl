@@ -33,39 +33,39 @@ class Landingcarousel extends Component {
           stopOnHover={false}
           >
           <div className="carouselImg">
-            <img src={one} />
+            <img className="imgs" src={one} />
           </div>
 
           <div className="carouselImg">
-            <img src={two} />
+            <img className="imgs" src={two} />
           </div>
 
           <div className="carouselImg">
-            <img src={three} />
+            <img className="imgs" src={three} />
           </div>
 
           <div className="carouselImg">
-            <img src={four} />
+            <img className="imgs" src={four} />
           </div>
 
           <div className="carouselImg">
-            <img src={five} />
+            <img className="imgs" src={five} />
           </div>
 
           <div className="carouselImg">
-            <img src={six} />
+            <img className="imgs" src={six} />
           </div>
 
           <div className="carouselImg">
-            <img src={seven} />
+            <img className="imgs" src={seven} />
           </div>
 
           <div className="carouselImg">
-            <img src={eight} />
+            <img className="imgs" src={eight} />
           </div>
 
           <div className="carouselImg">
-            <img src={nine} />
+            <img className="imgs" src={nine} />
           </div>
         </Carousel>
       </div>

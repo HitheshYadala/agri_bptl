@@ -1,64 +1,102 @@
-import React, { useState } from "react";
-import NewsTicker from "react-advanced-news-ticker";
+import React, { Component } from "react";
 import "../components/Styles/Hiringpartners.scss";
+import axios from "axios";
+import { Link } from 'react-router-dom';
 
-export default function NoticeBoard() {
-  const [data, setData] = useState([
-    {
-      id: `bulletItem_1`,
-      defaultMessage:
-        "Pound hovers around $1.24 on growing concern over chaotic Brexit",
-    },
-    {
-      id: `bulletItem_2`,
-      defaultMessage: "Why Brexiters do not fully trust Boris Johnson",
-    },
-    {
-      id: `bulletItem_3`,
-      defaultMessage: "Johnson is accused of living in fantasy world",
-    },
-  ]);
+export default class NoticeBoard extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div className="notice-board-container">
-      <h1 className="Hiring-partners">Notice Board</h1>
-      <NewsTicker
-        style={{ color: "green", fontWeight: "bold" , margin:"auto", display:"table",width:"100%"}}
-        className="news-ticker"
-        maxRows={12}
-        speed={1000}
-        pauseOnHover={true}
-        started={() => {
-          console.log("react advanced news ticker just started!");
-        }}
-        paused={() => {
-          console.log("react advanced news ticker has been paused.");
-        }}
-      >
-        <div className="news-item space">College day and Hostel day Celebrations 2023 to be held on 29.05.2023</div>
-        {/* <div className="news-item space">2nd year engineering results</div>
-        <div className="news-item space">3rd year engineering results</div>
-        <div className="news-item space">
-          University calling for compond wall bond click here
-        </div>
-        <div className="news-item space">
-          Share your ideas for this year fest in Agriculture university
-        </div>
-        <div className="news-item space">
-          4th year engineering supplimentary exams time table
-        </div>
-        <div className="news-item space">
-          Selected candidates for XYZ company please check here
-        </div>
-        <div className="news-item space">
-          Hostel fee structure changed for 2023-24 click here for more details
-        </div>
-        <div className="news-item space">
-          Convocation dates announced click here
-        </div> */}
+    this.state = {
+      notices: [],
+      isLoading: true,
+      dataArr : []
+    };
 
-        {console.log(data)}
-      </NewsTicker>
-    </div>
-  );
+    // Define the handleTitleClick function
+    this.handleTitleClick = (id) => {
+      // Do something when the title is clicked.
+      console.log("You clicked on title:", id);
+    };
+  }
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  handleMouseOver = () => {
+    this.marqueeRef.stop();
+  };
+
+  handleMouseOut = () => {
+    this.marqueeRef.start();
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    // Example: Perform some action if notices state changes after an update
+    if (this.state.notices !== prevState.notices) {
+      console.log("Notices have been updated:", typeof this.state.notices);
+    }
+  }
+
+  fetchData = async () => {
+    try {
+      // Fetch data for carousel and noticeboard
+      const noticeboardResponse = await axios.get(
+        "http://localhost:8000/noticeboard"
+      );
+      const allData = noticeboardResponse.data;
+      this.setState({dataArr : allData})
+      // Extract the titles and set them in the notices array
+      const noticeSet = allData.map((item) => item.Title);
+      this.setState({ notices: noticeSet, isLoading: false });
+      
+
+      // Save notices in localStorage
+      localStorage.setItem("notices", JSON.stringify(noticeSet));
+    } catch (error) {
+      console.error("Error fetching data:", error.message);
+    }
+  };
+
+
+
+  render() {
+    const { notices, isLoading } = this.state;
+
+    let updates =
+      
+    this.state.dataArr.map((item, index) => {
+
+        return <li key={index}>
+          <Link to={`/noticeBoarddetails/${item._id}`}>{item.Title}</Link>
+        
+        </li>;
+        
+      });
+
+    return (
+      <div className="notice-board-container">
+        <h1 className="Hiring-partners">Notice Board</h1>
+        <div className="box">
+          <marquee
+            height="300"
+            width="75%"
+            behavior="scroll"
+            direction="up"
+            scrollamount="4"
+            onMouseOver={this.handleMouseOver}
+            onMouseOut={this.handleMouseOut}
+            ref={(el) => (this.marqueeRef = el)}
+            style={{marginLeft:"150px", color:"#007CC7"}}
+          >
+            <ul>
+              {updates}
+            </ul>
+          </marquee>
+        </div>
+      </div>
+    );
+  }
 }
+

@@ -17,56 +17,56 @@ function Hiringpartners() {
   return (
     <>
     <h1 className="Hiring-partners">Hiring Partners</h1>
-        <div class="marquee">
-  <div class="marquee-content"> 
+        <div className="marquee">
+  <div className="marquee-content"> 
 
   
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p1} alt=""/>
     </div>
     
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p2} alt=""/>
     </div>
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p3} alt=""/>
     </div>
     
 
-    {/* <div class="marquee-item">
+    {/* <div className="marquee-item">
       <img src={p4} alt=""/>
     </div> */}
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p5} alt=""/>
     </div>
 
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p6} alt=""/>
     </div>
 
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p7} alt=""/>
     </div>
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p12} alt=""/>
     </div>
 
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p13} alt=""/>
     </div>
 
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p14} alt=""/>
     </div>
 
-    <div class="marquee-item">
+    <div className="marquee-item">
       <img src={p15} alt=""/>
     </div>
 

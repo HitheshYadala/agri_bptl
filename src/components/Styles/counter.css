@@ -82,10 +82,15 @@
     color: #0A2451;
     margin-top: 0;
   }
+  /* @media(min-width: 500px) and (max-width: 1440px){
+    .Vertical > div:last-child > div:nth-child(n+4) {
+      margin-top: 500px;
+    }
+    } */
   
   @media (max-width: 1440px) {
-    .Vertical > div:last-child > div {
-      flex-wrap: wrap;
+    .Vertical > div{
+      display: flex;
     }
   }
   

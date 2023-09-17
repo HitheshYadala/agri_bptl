@@ -1,6 +1,4 @@
-/* Mobile styles */
-
-
+/* 
 @media screen and (max-width: 767px) {
   .noticeboard {
     padding: 20px;
@@ -19,7 +17,7 @@
   }
 }
 
-/* Tablet styles */
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .noticeboard {
     padding: 30px;
@@ -38,7 +36,7 @@
   }
 }
 
-/* Large screen styles */
+
 @media screen and (min-width: 1024px) {
   .noticeboard {
     display: flex;
@@ -91,5 +89,32 @@
       transform: translateY(0);
       opacity: 0;
     }
+  }
+} */
+
+
+
+.box {
+  overflow: hidden;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.scrolling-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  animation: scroll 10s linear infinite;
+}
+
+.box:hover .scrolling-list {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% + 1.2em)); /* Adjust the value as needed */
   }
 }

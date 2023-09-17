@@ -1,6 +1,11 @@
 import React from "react";
 import "../components/Styles/Footer.css";
+
+
+
+
 function Footer() {
+
   return (
     <div>
       <div>
@@ -8,7 +13,7 @@ function Footer() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.9049148905697!2d80.48629227504996!3d15.914051584743136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a3f992da032d1%3A0x3ba91bdb3b8f6963!2sANGRAU%20-%20Dr%20NTR%20College%20of%20Agricultural%20Engineering%2C%20Bapatla!5e0!3m2!1sen!2sin!4v1683741610959!5m2!1sen!2sin"
           width="100%"
           height="300"
-          allowFullScreen="false"
+          // allowFullScreen="false"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

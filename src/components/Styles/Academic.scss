@@ -104,6 +104,12 @@
     
   }
 
+  .Academic{
+      width: 50%;
+      padding: 10px;
+    }
+  
+
   .imageAcademic{
     width: 50%;
     height: 50%;
@@ -213,6 +219,14 @@
         margin:16px;
         text-align: center;
       }
+      .Academic{
+        padding-bottom: 10px;
+        width: auto;
+        height: auto;
+    }
+    .imageAcademic{
+      padding-top: 5px;;
+    }
   }
   
   /* Add your styles for other sections and elements as needed */

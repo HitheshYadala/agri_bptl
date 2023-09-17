@@ -285,27 +285,27 @@ const Academic = () => {
             </table>
             <div className="ImagesContainers">
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={il} alt="Image" />
                   <h3>Insturmental Laboratory</h3>
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={fel} alt="Image" />
                   <h3>Food Engineering Laboratory</h3>
                 </div>
               </div>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={pel} alt="Image" />
                   <h3>Process Engineering Laboratory</h3>
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={frc} alt="Image" />
                   <h3>Fruit Ripening Chamber</h3>
                 </div>
               </div>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={elu} alt="Image" />
                   <h3>Experiential Learning Unit</h3>
                 </div>
@@ -322,21 +322,21 @@ const Academic = () => {
                 Laboratory Infrastructure
               </h2>
               <div className="text-with-image">
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={uma} alt="Image" />
                   <h3>Unibloc Moisture Analyzer</h3>
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={hfu} alt="Image" />
                   <h3>Hollow Fiber Ultra-Filtration</h3>
                 </div>
               </div>
               <div className="text-with-image">
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={fd} alt="Image" />
                   <h3>Freeze Dryer</h3>
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={bdv} alt="Image" />
                   <h3>Brookefield Digital Viscometer</h3>
                 </div>
@@ -354,7 +354,7 @@ const Academic = () => {
                 Department Staff
               </h2>
               <div className="text-with-image">
-                <div>
+              <div>
                   <img className="imageAcademic" src={s1} alt="Image" />
                   <h3>Dr. M. Madhava</h3>
                   <p className="text_academic">PROFESSOR & HEAD</p>
@@ -363,7 +363,7 @@ const Academic = () => {
                 </div>
               </div>
               <div className="text-with-image">
-                <div>
+              <div>
                   <img className="imageAcademic" src={s2} alt="Image" />
                   <h3>Dr. B. Sreenivasula Reddy</h3>
                   <p className="text_academic">ASSOCIATE PROFESSOR</p>
@@ -466,10 +466,10 @@ const Academic = () => {
                 </tbody>
               </table>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={fm1} alt="Image" />
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={fm2} alt="Image" />
                 </div>
               </div>
@@ -501,7 +501,7 @@ const Academic = () => {
                 </tbody>
               </table>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={fpl} alt="Image" />
                 </div>
               </div>
@@ -530,7 +530,7 @@ const Academic = () => {
                 </tbody>
               </table>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={el} alt="Image" />
                 </div>
               </div>
@@ -563,18 +563,18 @@ const Academic = () => {
                 </tbody>
               </table>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={aw1} alt="Image" />
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={aw2} alt="Image" />
                 </div>
               </div>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={aw3} alt="Image" />
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={aw4} alt="Image" />
                 </div>
               </div>
@@ -602,10 +602,10 @@ const Academic = () => {
                 </tbody>
               </table>
               <div className="text-with-image">
-                <div>
+              <div className="Academic">
                   <img className="imageAcademic" src={sdl1} alt="Image" />
                 </div>
-                <div>
+                <div className="Academic">
                   <img className="imageAcademic" src={sdl2} alt="Image" />
                 </div>
               </div>
@@ -627,18 +627,18 @@ const Academic = () => {
               be developed among the final year students of B.Tech. (Ag. Engg.).
             </p>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={elp1} alt="Image" />
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={elp2} alt="Image" />
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={elp3} alt="Image" />
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={elp4} alt="Image" />
               </div>
             </div>
@@ -657,7 +657,7 @@ const Academic = () => {
               Department Staff
             </h2>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s5} alt="Image" />
                 <h3>Dr. KVS RAMI REDDY</h3>
                 <p className="text_academic">PROFESSOR & HEAD</p>
@@ -666,7 +666,7 @@ const Academic = () => {
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s6} alt="Image" />
                 <h3>Dr. B. HARI BABU</h3>
                 <p className="text_academic">ASSOCIATE PROFESSOR</p>
@@ -675,7 +675,7 @@ const Academic = () => {
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s7} alt="Image" />
                 <h3>Er. D. VIJAY KUMAR</h3>
                 <p className="text_academic">ASSISTANT PROFESSOR</p>
@@ -730,7 +730,7 @@ const Academic = () => {
               Water Conservation methods.
             </p>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={sw} alt="Image" />
                 <h3>CAE Model Watershed with all component features</h3>
               </div>
@@ -787,7 +787,7 @@ const Academic = () => {
               Department Staff
             </h2>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s10} alt="Image" />
                 <h3>Dr. G. Ravi Babu</h3>
                 <p className="text_academic">PROFESSOR & HEAD</p>
@@ -796,7 +796,7 @@ const Academic = () => {
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s11} alt="Image" />
                 <h3>Er. M. Karunya</h3>
                 <p className="text_academic">ASSISTANT PROFESSOR</p>
@@ -894,20 +894,20 @@ const Academic = () => {
               </tbody>
             </table>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={id1} alt="Image" />
                 <h3>Irrigation and drainage laboratory</h3>
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id2} alt="Image" />
                 <h3>Cut models of various pumps</h3>
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={id3} alt="Image" />
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id4} alt="Image" />
               </div>
             </div>
@@ -916,21 +916,21 @@ const Academic = () => {
               Agricultural Engineering, Bapatla
             </h4>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={id5} alt="Image" />
                 <h3>Soil Moisture Probe</h3>
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id6} alt="Image" />
                 <h3>Digital Planimeter</h3>
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={id7} alt="Image" />
                 <h3>Drip Experimental plot at Field irrigation lab</h3>
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id8} alt="Image" />
                 <h3>
                   Harvesting of Bhendi from experimental plots at Field
@@ -939,25 +939,25 @@ const Academic = () => {
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={id9} alt="Image" />
                 <h3>Installation of drainage system</h3>
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id10} alt="Image" />
                 <h3>Laying of mulch in the field</h3>
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id11} alt="Image" />
                 <h3>Hand held GPS</h3>
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div className="Academic">
                 <img className="imageAcademic" src={id12} alt="Image" />
                 <h3>Fertigation Pump</h3>
               </div>
-              <div>
+              <div className="Academic">
                 <img className="imageAcademic" src={id13} alt="Image" />
                 <h3>Water level indicator</h3>
               </div>
@@ -974,7 +974,7 @@ const Academic = () => {
               Department Staff
             </h2>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s12} alt="Image" />
                 <h3>Dr. R. Ganesh Babu</h3>
                 <p className="text_academic">ASSISTANT PROFESSOR & HEAD</p>
@@ -983,7 +983,7 @@ const Academic = () => {
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s13} alt="Image" />
                 <h3>Dr. K. KRUPAVATHI</h3>
                 <p className="text_academic">ASSISTANT PROFESSOR</p>
@@ -1028,7 +1028,7 @@ const Academic = () => {
               Department Staff
             </h2>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s18} alt="Image" />
                 <h3>Dr. B. John Wesley</h3>
                 <p className="text_academic">PROFESSOR & HEAD</p>
@@ -1356,7 +1356,7 @@ const Academic = () => {
               Department Staff
             </h2>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s6} alt="Image" />
                 <h3>Dr. B. HARIBABU</h3>
                 <p className="text_academic">ASSISTANT PROFESSOR & HEAD</p>
@@ -1365,7 +1365,7 @@ const Academic = () => {
               </div>
             </div>
             <div className="text-with-image">
-              <div>
+            <div>
                 <img className="imageAcademic" src={s15} alt="Image" />
                 <h3>Er. B. Raj Naveen</h3>
                 <p className="text_academic">ASSOCIATE PROFESSOR</p>

@@ -12,11 +12,11 @@
 .testimonial-container {
   background-color: #0A2451;
   color: white;
-  border-radius: 15px;
-  margin: 30px;
+  /* border-radius: 15px; */
+  /* margin: 30px; */
   /* padding: 50px 80px; */
-  position: relative;
-  height: auto;
+  /* position: relative; */
+  /* height: auto; */
 }
 
 .fa-quote {
@@ -42,12 +42,13 @@
 
 .user {
   display: flex;
-  align-items:start;
+  align-items: start;
   flex-direction: column;
 }
 
 .user .user-image {
   /* border-radius: 50%; */
+  padding-right: 10px;
   height: 75px;
   width: 75px;
   object-fit: cover;
@@ -73,7 +74,10 @@
   animation: grow 10s linear infinite;
   transform-origin: left;
 }
-
+.textp{
+  font-size: 20px;
+  
+}
 @keyframes grow {
   0% {
     transform: scaleX(0);
@@ -97,12 +101,16 @@
   }
 
   .textp {
+    
+    
     display: block;
     width: 100px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: 20px;
+    /* margin-left: 20px !important; */
+    margin-top: 1rem;
+    margin-left: 10px;
   }
   
   .user .user-image {
@@ -170,7 +178,7 @@
 
 @media (min-width: 992px) {
   .testimonial-container {
-    padding: 50px 80px;
+    padding: 30px 50px;
     margin: 50px;
   }
 

@@ -1,0 +1,166 @@
+
+
+
+
+
+
+
+
+
+
+
+.side_heading{
+    text-align: center;
+    padding-top: 50px;
+    color: #0A2451;
+    text-decoration: underline;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+    letter-spacing: 5px;
+}
+.button-row1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.raiser:hover,
+.raiser:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.raiserbutton{  
+    font-size: 20px !important;
+    color: whitesmoke;
+    border-radius: 10px;
+    height: 50px;
+}
+.content {
+    border: 2px solid #0A2451; /* Set border color */
+    color: #0A2451; /* Set text color */
+    background-color: white; /* Set background color */
+ }
+
+.content:hover {
+    background-color: #0A2451;
+    color: whitesmoke;
+  }
+
+.content:focus {
+    background-color: #0A2451;
+    color: whitesmoke;
+  }
+
+  .text_studentwelfare{
+    font-size: 18px;
+}
+
+.imageStudentwelfare{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin:auto;
+    aspect-ratio: 16/9;
+  }
+
+  .text-of-studentwelfare {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .text-of-studentwelfare h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+    
+  }
+  .raggingimage{
+    display: flex;
+    height:auto;
+    width :35%;
+    margin:auto;
+ 
+
+  }
+  .imagehealth{
+    width: 33.33%;
+    padding: 10px;
+  }
+
+  .imagelibrary{
+    width: 33.33%;
+    padding: 10px;
+  }
+  
+  .imageNSS{
+    width: 33.33%;
+    padding: 10px;
+  }
+
+  .imagesports{
+    width: 33.33%;
+    padding: 10px;
+  }
+  .imagesportstable{
+    display: flex;
+    height:auto;
+    width :50%;
+    margin:auto;
+  }
+
+  @media (max-width: 768px) {
+    .button-row1 {
+      flex-direction: column;
+      align-items: center;
+      padding:10px
+    }
+
+    .content {
+        border: 2px solid #0A2451; /* Set border color */
+        color: #0A2451; /* Set text color */
+        background-color: whitesmoke; /* Set background color */
+        width:270px;
+        padding:10px;
+        margin:8px;
+     }
+
+     .text-of-studentwelfare {
+        flex-direction: column;
+      }
+    .raiserbutton{
+        height: 58px;
+    }
+     .raggingimage{
+        width: 100%;
+        display: flex;
+     }
+
+    .imagehealth{
+        padding-bottom: 10px;
+        width: auto;
+        height: auto;
+    }
+
+    .imagelibrary{
+      padding-bottom: 10px;
+      width: auto;
+      height: auto;
+  }
+  
+  .imageNSS{
+    padding-bottom: 10px;
+    width: auto;
+    height: auto;
+}
+.imagesports{
+  padding-bottom: 10px;
+  width: auto;
+  height: auto;
+}
+
+.imagesportstable{
+  padding-bottom: 10px;
+  width: auto;
+  height: auto;
+}
+  }
