@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../../components/Styles/carouselWorker.scss"
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const TrackrecordUpload = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -37,7 +38,7 @@ const TrackrecordUpload = () => {
       
       
       formDate(formData)
-      const response = await axios.post('http://localhost:8000/trackrecord', formData, {
+      const response = await axios.post(`${api_url}/trackrecord`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

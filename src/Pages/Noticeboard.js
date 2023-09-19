@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../components/Styles/Hiringpartners.scss";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import { api_url } from "../App";
 
 export default class NoticeBoard extends Component {
   constructor(props) {
@@ -43,7 +44,7 @@ export default class NoticeBoard extends Component {
     try {
       // Fetch data for carousel and noticeboard
       const noticeboardResponse = await axios.get(
-        "http://localhost:8000/noticeboard"
+        `${api_url}/noticeboard`
       );
       const allData = noticeboardResponse.data;
       this.setState({dataArr : allData})
@@ -69,7 +70,7 @@ export default class NoticeBoard extends Component {
     this.state.dataArr.map((item, index) => {
 
         return <li key={index}>
-          <Link to={`/noticeBoarddetails/${item._id}`}>{item.Title}</Link>
+          <Link style={{textDecoration:"none", fontWeight:"bold", color:"orange"}} to={`/noticeBoarddetails/${item._id}`}>{item.Title}</Link>
         
         </li>;
         

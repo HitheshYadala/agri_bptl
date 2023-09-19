@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../../components/Styles/carouselWorker.scss"
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const HiringpartnerUpload = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -61,7 +62,7 @@ const HiringpartnerUpload = () => {
       formData.append('endDate', endDate);
       
       formDate(formData)
-      const response = await axios.post('http://localhost:8000/hiringpartner', formData, {
+      const response = await axios.post(`${api_url}/hiringpartner`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

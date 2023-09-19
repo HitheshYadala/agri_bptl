@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../components/Styles/CarouselDelete.scss'; // Import the CSS file for styling
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const TrackrecordDelete = () => {
   const [images, setImages] = useState([]);
@@ -15,7 +16,7 @@ const TrackrecordDelete = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/trackrecord');
+      const response = await axios.get(`${api_url}/trackrecord`);
       setImages(response.data);
       setIsLoading(false);
     } catch (error) {
@@ -26,7 +27,7 @@ const TrackrecordDelete = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/trackrecord/${id}`);
+      await axios.delete(`${api_url}/trackrecord/${id}`);
       setDeletedItemId(id); // Store the ID of the deleted item to trigger animation
       fetchImages(); // Refresh the images after deletion
     } catch (error) {

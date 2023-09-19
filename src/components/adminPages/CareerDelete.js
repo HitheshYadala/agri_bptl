@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../components/Styles/CarouselDelete.scss'; // Import the CSS file for styling
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const CareerDelete = () => {
   const [images, setImages] = useState([]);
@@ -11,11 +12,12 @@ const CareerDelete = () => {
 
   useEffect(() => {
     fetchImages();
+    console.log(`${api_url}/career`)
   }, []);
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/career');
+      const response = await axios.get(`${api_url}/career`);
       setImages(response.data);
       setIsLoading(false);
     } catch (error) {
@@ -34,7 +36,7 @@ const CareerDelete = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/career/${id}`);
+      await axios.delete(`${api_url}career/${id}`);
       setDeletedItemId(id); // Store the ID of the deleted item to trigger animation
       fetchImages(); // Refresh the images after deletion
     } catch (error) {

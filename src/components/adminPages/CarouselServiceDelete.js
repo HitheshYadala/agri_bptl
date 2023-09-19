@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../components/Styles/CarouselDelete.scss'; // Import the CSS file for styling
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const CarouselServiceDelete = () => {
   const [images, setImages] = useState([]);
@@ -11,11 +12,12 @@ const CarouselServiceDelete = () => {
 
   useEffect(() => {
     fetchImages();
+    console.log(`${api_url}/career`)
   }, []);
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('https://caebptbackendservices.onrender.com/carousel');
+      const response = await axios.get(`${api_url}/carousel`);
       setImages(response.data);
       setIsLoading(false);
     } catch (error) {
@@ -34,7 +36,7 @@ const CarouselServiceDelete = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://caebptbackendservices.onrender.com/carousel/${id}`);
+      await axios.delete(`${api_url}/carousel/${id}`);
       setDeletedItemId(id); // Store the ID of the deleted item to trigger animation
       fetchImages(); // Refresh the images after deletion
     } catch (error) {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../../components/Styles/carouselWorker.scss";
 import LoadingSpinner from "../LoadingSpinner";
+import { api_url } from "../../App";
 
 const NoticeboardUpload = () => {
   const [successMessage, setSuccessMessage] = useState("");
@@ -73,7 +74,7 @@ const NoticeboardUpload = () => {
       
 
       const response = await axios.post(
-        "https://caebptbackendservices.onrender.com/noticeboard",
+        `${api_url}/noticeboard`,
         formData,
         {
           headers: {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../../components/Styles/carouselWorker.scss"
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const CarouselServiceWorker = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -62,7 +63,7 @@ const CarouselServiceWorker = () => {
       formData.append('link', link);
       formData.append('isNew', isNew.toString());
 
-      const response = await axios.post('https://caebptbackendservices.onrender.com/carousel', formData, {
+      const response = await axios.post(`${api_url}/carousel`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

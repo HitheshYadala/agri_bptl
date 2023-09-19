@@ -37,6 +37,7 @@ import PhotogalleryUpload from "./components/adminPages/PhotogalleryUpload";
 import PhotogalleryDelete from "./components/adminPages/PhotogalleryDelete";
 import NoticeBoardDetails from "./Pages/NoticeBoardDetails";
 import NoticeBoard from "./Pages/Noticeboard";
+import TendersPage from "./Pages/TendersPage";
 function App() {
   return (
     <>
@@ -56,6 +57,7 @@ function App() {
         <Route path="/publications" element={<Publications />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/individualPage" element={<IndividualDeansMessage />} />
+        <Route path="/tendersPage/:id" element={<TendersPage />} />
 
         <Route path="/noticeBoard" exact element={<NoticeBoard />} />
         <Route path="/noticeBoarddetails/:id" element={<NoticeBoardDetails />} />
@@ -92,4 +94,6 @@ function App() {
     </>
   );
 }
+
+export const api_url = "https://caebptbackendservices.onrender.com"
 export default App;

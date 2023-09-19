@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 import '../../components/Styles/CarouselDelete.scss'; // Import the CSS file for styling
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 
 
@@ -17,7 +18,7 @@ function NoticeboardDeleteWorker() {
   
     const fetchImages = async () => {
       try {
-        const response = await axios.get('https://caebptbackendservices.onrender.com/noticeboard');
+        const response = await axios.get(`${api_url}/noticeboard`);
         setImages(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -36,7 +37,7 @@ function NoticeboardDeleteWorker() {
   
     const handleDelete = async (id) => {
       try {
-        await axios.delete(`https://caebptbackendservices.onrender.com/noticeboard/${id}`);
+        await axios.delete(`${api_url}/noticeboard/${id}`);
         setDeletedItemId(id); // Store the ID of the deleted item to trigger animation
         fetchImages(); // Refresh the images after deletion
       } catch (error) {

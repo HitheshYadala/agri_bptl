@@ -27,7 +27,7 @@
 
 .imageWrapper {
   margin: 10px;
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: calc(25.33% - 20px);
 
   // flex-grow: 1;
 }
@@ -44,6 +44,7 @@
 
   width: 90%;
   // height: 80%;
+  
 }
 
 .imageMatter{
@@ -98,4 +99,30 @@
   .imageWrapper {
     flex-basis: 100%;
   }
+}
+
+
+.details {
+  // background-color: #f2f2f2; /* Background color for the details section */ /* Padding around the details */
+  margin: 0px; /* Margin around each staff member section */
+  // border: 1px solid #ddd; /* Border around each staff member section */
+  border-radius: 5px; /* Rounded corners for the border */
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+  // align-items:start;
+  // text-align: center;
+  // justify-content: left;
+}
+
+
+
+.staffName {
+  margin: 5px 0; /* Margin for the staff member's name */
+  font-size: 18px; /* Font size for the name */
+  font-weight: bold; /* Bold font for the name */
+}
+
+.staffDetails {
+  margin: 5px 0; /* Margin for other details (designation, department, contact) */
+  font-size: 16px; /* Font size for other details */
+  color: #555; /* Text color for other details */
 }

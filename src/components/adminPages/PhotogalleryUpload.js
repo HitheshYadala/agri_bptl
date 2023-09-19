@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../../components/Styles/carouselWorker.scss"
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const PhotogalleryUpload = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -61,7 +62,7 @@ const PhotogalleryUpload = () => {
       formData.append('endDate', endDate);
       
       formDate(formData)
-      const response = await axios.post('http://localhost:8000/photogallery', formData, {
+      const response = await axios.post(`${api_url}/photogallery`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

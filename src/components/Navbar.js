@@ -9,7 +9,7 @@ import {
   useMediaQuery,
   MenuItem,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 import CollageLogo from "../assets/clglogo.png";
 import headerImg from "../assets/HeaderImg.jpg";
@@ -21,12 +21,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "70px",
   },
+
   logo: {
     flexGrow: "1",
     cursor: "pointer",
   },
   link: {
-    position:"relative",
+    position: "relative",
     textDecoration: "none",
     color: "white",
     fontSize: "20px",
@@ -66,6 +67,10 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "rgba(255, 255, 255, 0.1)",
     },
   },
+  activeLink: {
+    borderBottom: "2px solid white", // Add this style for active links
+    color: "yellow",
+  },
 }));
 
 const style = {
@@ -79,6 +84,7 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [academicOpen, setAcademicOpen] = useState(false);
   const academicRef = useRef();
+  const location = useLocation(); // Get the current route location
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -116,27 +122,65 @@ function Navbar() {
           <DrawerComponent />
         ) : (
           <div className={classes.navlinks}>
-            <Link to="/" className={classes.link}>
+            <Link
+              to="/"
+              className={`${classes.link} ${
+                location.pathname === "/" ? classes.activeLink : ""
+              }`}
+            >
               Home
             </Link>
-            <Link to="/about" className={classes.link}>
+            <Link
+              to="/about"
+              className={`${classes.link} ${
+                location.pathname === "/about" ? classes.activeLink : ""
+              }`}
+            >
               About
             </Link>
-            <Link to="/admission" className={classes.link}>
+            <Link
+              to="/admission"
+              className={`${classes.link} ${
+                location.pathname === "/admission" ? classes.activeLink : ""
+              }`}
+            >
               Administration
             </Link>
 
-            <Link to="/academic" className={classes.link}>
+            <Link
+              to="/academic"
+              className={`${classes.link} ${
+                location.pathname === "/academic" ? classes.activeLink : ""
+              }`}
+            >
               Academics
             </Link>
 
-            <Link to="/studentwelfare" className={classes.link}>
+            <Link
+              to="/studentwelfare"
+              className={`${classes.link} ${
+                location.pathname === "/studentwelfare"
+                  ? classes.activeLink
+                  : ""
+              }`}
+            >
               Student Welfare
             </Link>
-            <Link to="/publications" className={classes.link}>
+
+            <Link
+              to="/publications"
+              className={`${classes.link} ${
+                location.pathname === "/publications" ? classes.activeLink : ""
+              }`}
+            >
               Publications
             </Link>
-            <Link to="/contactus" className={classes.link}>
+            <Link
+              to="/contactus"
+              className={`${classes.link} ${
+                location.pathname === "/contactus" ? classes.activeLink : ""
+              }`}
+            >
               Contact Us
             </Link>
           </div>
@@ -275,11 +319,10 @@ export default Navbar;
 //             <link to="/admission" className={classes.link}>
 //               Administration
 //             </link>
-            
+
 //               <link to="/academic" className={classes.link}>
 //                 Academics
 //               </link>
-             
 
 //             <link to="/studentwelfare" className={classes.link}>
 //               Student Welfare

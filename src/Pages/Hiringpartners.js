@@ -1,80 +1,42 @@
-import React from 'react'
-import "../components/Styles/Hiringpartners.scss"
-import p1 from "../assets/Hiringpartners/p1.png"
-import p2 from "../assets/Hiringpartners/p2.png"
-import p3 from "../assets/Hiringpartners/p3.png"
-// import p4 from "../assets/Hiringpartners/p4.png"
-import p5 from "../assets/Hiringpartners/p5.png"
-import p6 from "../assets/Hiringpartners/p6.png"
-import p7 from "../assets/Hiringpartners/p7.png"
-import p12 from "../assets/Hiringpartners/p12.png"
-import p13 from "../assets/Hiringpartners/p13.png"
-import p14 from "../assets/Hiringpartners/p14.png"
-import p15 from "../assets/Hiringpartners/p15.png"
-
+import React, { useEffect, useState } from 'react';
+import { api_url } from '../App';
+import axios from 'axios';
 
 function Hiringpartners() {
+  const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
+  const fetchImages = async () => {
+    try {
+      const response = await axios.get(`${api_url}/hiringpartner`);
+      setImages(response.data);
+      setIsLoading(false);
+
+      const partnerArr = response.data.map((item) => item.Image);
+      setImages(partnerArr);
+    } catch (error) {
+      console.error('Error fetching Hiring partners:', error.message);
+    }
+  };
+
   return (
     <>
-    <h1 className="Hiring-partners">Hiring Partners</h1>
-        <div className="marquee">
-  <div className="marquee-content"> 
-
-  
-    <div className="marquee-item">
-      <img src={p1} alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src={p2} alt=""/>
-    </div>
-
-    <div className="marquee-item">
-      <img src={p3} alt=""/>
-    </div>
-    
-
-    {/* <div className="marquee-item">
-      <img src={p4} alt=""/>
-    </div> */}
-
-    <div className="marquee-item">
-      <img src={p5} alt=""/>
-    </div>
-
-
-    <div className="marquee-item">
-      <img src={p6} alt=""/>
-    </div>
-
-
-    <div className="marquee-item">
-      <img src={p7} alt=""/>
-    </div>
-
-    <div className="marquee-item">
-      <img src={p12} alt=""/>
-    </div>
-
-
-    <div className="marquee-item">
-      <img src={p13} alt=""/>
-    </div>
-
-
-    <div className="marquee-item">
-      <img src={p14} alt=""/>
-    </div>
-
-    <div className="marquee-item">
-      <img src={p15} alt=""/>
-    </div>
-
-  </div>
-</div>
-</>
-
-  )
+      <h1 className="Hiring-partners">Hiring Partners</h1>
+      <div className="marquee">
+        <div className="marquee-content">
+          {images.map((item, index) => (
+            <div className="marquee-item" key={index}>
+              <img src={`data:image/png;base64,${item}`} alt="" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Hiringpartners
+export default Hiringpartners;

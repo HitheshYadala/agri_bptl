@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../../components/Styles/carouselWorker.scss"
 import LoadingSpinner from '../LoadingSpinner';
+import { api_url } from '../../App';
 
 const TenderUpload = () => {
   const [successMessage, setSuccessMessage] = useState('');
@@ -15,6 +16,7 @@ const TenderUpload = () => {
   const [endDate, setEndDate] = useState('');
   const [previewImage, setPreviewImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedOption, setSelectedOption] = useState('');
  
 
   const handleFileChange = (e) => {
@@ -33,6 +35,10 @@ const TenderUpload = () => {
     } else {
       setPreviewImage(null);
     }
+  };
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
   };
 
   const resetForm = () => {
@@ -61,7 +67,7 @@ const TenderUpload = () => {
       formData.append('endDate', endDate);
       
       formDate(formData)
-      const response = await axios.post('http://localhost:8000/tender', formData, {
+      const response = await axios.post(`${api_url}/tender`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -95,6 +101,13 @@ const TenderUpload = () => {
         )}
       </div>
       <input type="file" onChange={handleFileChange} />
+
+      
+      {/* <div className="boxShadow box_width" style={{ width: '70%', height: 'auto', margin: 'auto' }}> */}
+        
+        {/* Rest of your component */}
+      {/* </div> */}
+
       <input
         type="text"
         placeholder="Title"

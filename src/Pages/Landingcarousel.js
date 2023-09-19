@@ -1,76 +1,61 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
-import one from "../assets/Landingpage/1.jpg";
-import two from "../assets/Landingpage/2.JPG";
-import three from "../assets/Landingpage/3.png";
-import four from "../assets/Landingpage/4.JPG";
-import five from "../assets/Landingpage/5.JPG";
-import six from "../assets/Landingpage/6.jpg";
-import seven from "../assets/Landingpage/7.jpg";
-import eight from "../assets/Landingpage/8.JPG";
-import nine from "../assets/Landingpage/9.png";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import axios from "axios";
 import "../components/Styles/Landingcarousel.css";
+import { api_url } from "../App";
 
-class Landingcarousel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      index: 0,
-    };
-  }
-  render() {
-    let imageStack = [one, two, three, four, five, six, seven, eight, nine];
+const Landingcarousel = () => {
+  const [index, setIndex] = useState(0);
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [imgSet, setImgSet] = useState([]);
 
-    return (
-      <div className="main">
-        <Carousel 
-          showThumbs={false} 
-          infiniteLoop={true} 
-          dynamicHeight={false}
-          autoPlay={true}
-          stopOnHover={false}
-          >
-          <div className="carouselImg">
-            <img className="imgs" src={one} />
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
+  const fetchImages = async () => {
+    try {
+      const response = await axios.get(`${api_url}/carousel`);
+      setData(response.data);
+
+      // Create a new array based on response.data and update the state
+      const imageArray = response.data.map((item) => item.Image);
+      setImgSet(imageArray);
+
+      setIsLoading(false);
+    } catch (error) {
+      console.error("Error fetching images:", error.message);
+    }
+  };
+
+  const imageDataHandler = (imageData) => {
+    console.log("ImageData ", imageData);
+  };
+
+  return (
+    <div className="main">
+      <Carousel
+        showThumbs={false}
+        infiniteLoop={true}
+        dynamicHeight={false}
+        autoPlay={true}
+        stopOnHover={false}
+        selectedItem={index}
+        onChange={(index) => setIndex(index)}
+      >
+        {imgSet.map((image, idx) => (
+          <div className="carouselImg" key={idx}>
+            <img className="imgs" 
+            // src={image}
+            src={`data:image/png;base64,${image}`}
+            alt={`Image ${idx}`} />
           </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={two} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={three} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={four} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={five} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={six} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={seven} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={eight} />
-          </div>
-
-          <div className="carouselImg">
-            <img className="imgs" src={nine} />
-          </div>
-        </Carousel>
-      </div>
-    );
-  }
-}
+        ))}
+      </Carousel>
+    </div>
+  );
+};
 
 export default Landingcarousel;
