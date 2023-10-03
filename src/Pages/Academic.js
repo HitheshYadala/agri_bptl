@@ -11,7 +11,7 @@ import fd from "../assets/Freezedryer.png";
 import bdv from "../assets/Brookefielddigitalviscometer.png";
 import s1 from "../assets/staff1.png";
 import s2 from "../assets/staff2.png";
-import s3 from "../assets/staff3.png";
+import s3 from "../assets/viceChancellor.png";
 import s4 from "../assets/staff4.png";
 import fm1 from "../assets/Farmmachineryone.png";
 import fm2 from "../assets/Farmmachinerytwo.png";
@@ -374,10 +374,10 @@ const Academic = () => {
                 </div>
                 <div>
                   <img className="imageAcademic" src={s3} alt="Image" />
-                  <h3>Dr. S. Vishnu Vardhan</h3>
-                  <p className="text_academic">ASSOCIATE PROFESSOR</p>
-                  <p className="text_academic">+91 9440363112</p>
-                  <p className="text_academic">vishnuvardhans@angrau.ac.in</p>
+                  <h3>Dr. R. Sarada Jayalakshmi Devi</h3>
+                  <p className="text_academic">Vice-Chancellor</p>
+                  <p className="text_academic">0863-2347011</p>
+                  <p className="text_academic">vicechancellor@angrau.ac.in</p>
                 </div>
                 <div>
                   <img className="imageAcademic" src={s4} alt="Image" />

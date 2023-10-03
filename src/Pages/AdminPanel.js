@@ -1,10 +1,25 @@
 import React from "react";
 import "../components/Styles/adminPanel.scss";
 import { Link } from "react-router-dom";
+import Logout from "../Logout";
 
 function AdminPanel() {
+
+
   return (
-    <div className="adminBody">
+    // <div style={{position:"relative"}}>
+    //     <span style={{marginLeft:"auto"}}> <Logout /></span>
+     
+    <>
+
+<div style={{ position: "relative", display: "flex", alignItems: "center" }}>
+  <span style={{ marginLeft: "auto" }}>
+    <Logout />
+  </span>
+</div>
+
+
+    <div className="adminBody" style={{marginTop:"4px"}}> 
       <div className="background"></div>
       <article className="card" id="one">
         <h2>Carousel</h2>
@@ -58,6 +73,10 @@ function AdminPanel() {
         </Link>
         </ul>
       </article>
+
+
+
+
       <article className="card">
         <h2>Training & Skills Development</h2>
         <ul>
@@ -138,11 +157,12 @@ function AdminPanel() {
         </ul>
       </article>
 
-
-      
-
+ 
           
     </div>
+    </>
+
+    // </div>
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../components/Styles/noticeboardDetails.css"
+import { api_url } from "../App";
 
 const NoticeBoardDetails = () => {
   // Use the useParams hook to get the dynamic parameter from the URL
@@ -57,7 +58,7 @@ const NoticeBoardDetails = () => {
   const fetchImages = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/noticeboard/" + id
+        `${api_url}/noticeboard/` + id
       );
       setImages(response.data);
       setDataArr(response.data);

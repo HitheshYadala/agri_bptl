@@ -8,7 +8,7 @@ function Coursecounter() {
   const [content, setContent] = useState([
     "UG Courses",
     "PG Courses",
-    "P.hd Courses",
+    "Ph.D Courses",
     "UG Strength",
     "PG/Ph.D strength",
     "Hostels boys/girls",

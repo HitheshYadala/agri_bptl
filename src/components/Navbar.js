@@ -13,6 +13,7 @@ import { Link, useLocation } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 import CollageLogo from "../assets/clglogo.png";
 import headerImg from "../assets/HeaderImg.jpg";
+import Logout from "../Logout";
 
 const useStyles = makeStyles((theme) => ({
   navlinks: {

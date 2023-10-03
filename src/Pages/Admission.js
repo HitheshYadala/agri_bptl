@@ -58,6 +58,24 @@ function Admission() {
       <div className="imageGridContainer">
         <div>
           {/* <h1 className="admissionPage_headings">Chancellors & Deans</h1> */}
+
+          <div className="imageGrid1 ">
+            {viceChancellor.map((viceChancellor, index) => (
+              <div key={index} className="imageWrapper1">
+                <div className="aspectRatioWrapper1">
+                  <img
+                    className="administration_images1"
+                    src={`data:image/jpeg;base64,${viceChancellor.Image}`}
+                    alt={`Dean Image ${index + 1}`}
+                  />
+                </div>
+                <p className="imageMatter">{viceChancellor.Name}</p>
+                <p className="imageMatter">{viceChancellor.Designation}</p>
+              </div>
+            ))}
+          </div>
+
+          
           <div className="imageGrid1 ">
             {deans.map((dean, index) => (
               <div key={index} className="imageWrapper1">

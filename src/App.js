@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
 } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
@@ -38,7 +39,13 @@ import PhotogalleryDelete from "./components/adminPages/PhotogalleryDelete";
 import NoticeBoardDetails from "./Pages/NoticeBoardDetails";
 import NoticeBoard from "./Pages/Noticeboard";
 import TendersPage from "./Pages/TendersPage";
+import Login from "./Login";
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem('isLoggedIn') === 'true'
+  );
+
   return (
     <>
 
@@ -63,33 +70,31 @@ function App() {
         <Route path="/noticeBoarddetails/:id" element={<NoticeBoardDetails />} />
       </Routes>
 
-
       <Routes>
-        
-      <Route path="/adminpanel" element={<AdminPanel />} />
-        <Route exact path="/carouselWorkerUpload" element={<CarouselServiceWorker />} />
+        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/adminpanel" element={isLoggedIn ? <AdminPanel /> : <Navigate to="/login" />}/>
+        <Route exact path="/carouselWorkerUpload" element={isLoggedIn ? <CarouselServiceWorker /> : <Navigate to="/login" />} />
         <Route exact path="/carouselWorkerDelete" element={<CarouselServiceDelete />} />
-        <Route exact path="/noticeboardUpload" element={<NoticeboardUpload />} />  
-        <Route exact path="/noticeboardDelete" element={<NoticeboardDeleteWorker/>} />
-        <Route exact path="/staffUpload" element={<StaffUpload />} /> 
-        <Route exact path="/staffDelete" element={<StaffDelete />} /> 
-        <Route exact path="/hiringpartnerUpload" element={<HiringpartnerUpload />} />
-        <Route exact path="/hiringpartnerDelete" element={<HiringpartnerDelete />} />
-        <Route exact path="/trainingUpload" element={<TrainingUpload />} />
-        <Route exact path="/trainingDelete" element={<TrainingDelete />} />
-        <Route exact path="/trackrecordUpload" element={<TrackrecordUpload />} />
-        <Route exact path="/trackrecordDelete" element={<TrackrecordDelete />} />
-        <Route exact path="/careerUpload" element={<CareerUpload />} />
-        <Route exact path="/careerDelete" element={<CareerDelete />} />
-        <Route exact path="/examcalenderUpload" element={<ExamcalenderUpload />} />
-        <Route exact path="/examcalenderDelete" element={<ExamcalenderDelete />} />
-        <Route exact path="/tenderUpload" element={<TenderUpload />} />
-        <Route exact path="/tenderDelete" element={<TenderDelete />} />
-        <Route exact path="/photogalleryUpload" element={<PhotogalleryUpload />} />
-        <Route exact path="/photogalleryDelete" element={<PhotogalleryDelete />} />
+        <Route exact path="/noticeboardUpload" element={isLoggedIn ? <NoticeboardUpload /> : <Navigate to="/login" />} />  
+        <Route exact path="/noticeboardDelete" element={isLoggedIn ? <NoticeboardDeleteWorker/>: <Navigate to="/login" />} />
+        <Route exact path="/staffUpload" element={isLoggedIn ? <StaffUpload /> : <Navigate to="/login" />} /> 
+        <Route exact path="/staffDelete" element={isLoggedIn ? <StaffDelete />: <Navigate to="/login" />} /> 
+        <Route exact path="/hiringpartnerUpload" element={isLoggedIn ? <HiringpartnerUpload /> : <Navigate to="/login" />} />
+        <Route exact path="/hiringpartnerDelete" element={isLoggedIn ?<HiringpartnerDelete />: <Navigate to="/login" />} />
+        <Route exact path="/trainingUpload" element={isLoggedIn ?<TrainingUpload />: <Navigate to="/login" />} />
+        <Route exact path="/trainingDelete" element={isLoggedIn ?<TrainingDelete />: <Navigate to="/login" />} />
+        <Route exact path="/trackrecordUpload" element={isLoggedIn ?<TrackrecordUpload />: <Navigate to="/login" />} />
+        <Route exact path="/trackrecordDelete" element={isLoggedIn ?<TrackrecordDelete />: <Navigate to="/login" />} />
+        <Route exact path="/careerUpload" element={isLoggedIn ?<CareerUpload />: <Navigate to="/login" />} />
+        <Route exact path="/careerDelete" element={isLoggedIn ?<CareerDelete />: <Navigate to="/login" />} />
+        <Route exact path="/examcalenderUpload" element={isLoggedIn ?<ExamcalenderUpload />: <Navigate to="/login" />} />
+        <Route exact path="/examcalenderDelete" element={isLoggedIn ?<ExamcalenderDelete />: <Navigate to="/login" />} />
+        <Route exact path="/tenderUpload" element={isLoggedIn ?<TenderUpload />: <Navigate to="/login" />} />
+        <Route exact path="/tenderDelete" element={isLoggedIn ?<TenderDelete />: <Navigate to="/login" />} />
+        <Route exact path="/photogalleryUpload" element={isLoggedIn ?<PhotogalleryUpload />: <Navigate to="/login" />} />
+        <Route exact path="/photogalleryDelete" element={isLoggedIn ?<PhotogalleryDelete />: <Navigate to="/login" />} />
 
       </Routes>
-
     </Router>
     </>
   );
