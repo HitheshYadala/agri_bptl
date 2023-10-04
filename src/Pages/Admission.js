@@ -40,7 +40,7 @@ function Admission() {
   }
 
 
-  const deans = images.filter((member) => member.Designation === "DEAN");
+  const deans = images.filter((member) => member.Designation === "DEAN OF AGRI. ENGG & TECH");
 
   const viceChancellor = images.filter((member) => member.Designation === "VICE-CHANCELLOR");
 

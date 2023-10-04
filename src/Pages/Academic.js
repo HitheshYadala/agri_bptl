@@ -372,13 +372,13 @@ const Academic = () => {
                     b.sreenivasulareddy@angrau.ac.in
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <img className="imageAcademic" src={s3} alt="Image" />
                   <h3>Dr. R. Sarada Jayalakshmi Devi</h3>
                   <p className="text_academic">Vice-Chancellor</p>
                   <p className="text_academic">0863-2347011</p>
                   <p className="text_academic">vicechancellor@angrau.ac.in</p>
-                </div>
+                </div> */}
                 <div>
                   <img className="imageAcademic" src={s4} alt="Image" />
                   <h3>Dr. K. Lavanya</h3>

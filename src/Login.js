@@ -9,7 +9,7 @@ function Login({ setIsLoggedIn }) {
 
   const handleLogin = () => {
     // Perform your login validation here, e.g., check if username and password are correct
-    if (username === 'admin' && password === 'password') {
+    if (username === 'admin' && password === 'caebpt!@#45') {
         localStorage.setItem('isLoggedIn', 'true');
       setIsLoggedIn(true); // Set isLoggedIn to true if login is successful
       navigate('/adminpanel'); // Redirect to the desired route
@@ -32,7 +32,7 @@ function Login({ setIsLoggedIn }) {
       <div >
         <button className="buttonLogin" style={{margin:'20px'}} onClick={handleLogin}>Login</button>
       </div>
-      {error && <p>{error}</p>}
+      {error && <p style={{color:"red"}}>{error}</p>}
     </div>
   );
 }
