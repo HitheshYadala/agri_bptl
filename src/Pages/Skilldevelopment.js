@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import "../components/Styles/SkillTraining.scss";
 import { api_url } from '../App';
 import axios from 'axios';
+import "../components/Styles/SkillTraining.scss"
 
 function Skilldevelopment() {
-
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -21,14 +20,13 @@ function Skilldevelopment() {
       const partnerArr = response.data.map((item) => item.Image);
       setImages(partnerArr);
     } catch (error) {
-      console.error('Error fetching Training partners:', error.message);
+      console.error('Error fetching Hiring partners:', error.message);
     }
   };
 
-
   return (
     <div>
-      <h1 className="Hiring-partnersy">Training & Skill development</h1>
+      <h1 className="Hiring-partnersy">Hiring Partners</h1>
       <div className="marqueey">
         <div className="marquee-contenty">
           {images.map((item, index) => (

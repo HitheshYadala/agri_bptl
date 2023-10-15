@@ -52,7 +52,7 @@ function Studentwelfare() {
               for taking any further action on the erring students.
             </p>
             <div>
-              <img className="raggingimage" src={ar} alt="Image" />
+              <img className="raggingimage" src={ar} alt="ragging" />
             </div>
 
             <ul>
@@ -112,13 +112,13 @@ function Studentwelfare() {
             </h3>
             <div className="text-of-studentwelfare">
               <div className="imagehealth">
-                <img className="imageStudentwelfare" src={hc1} alt="Image"/>
+                <img className="imageStudentwelfare" src={hc1} alt="imagehealthone"/>
               </div>
               <div className="imagehealth">
-                <img className="imageStudentwelfare" src={hc2} alt="Image" />
+                <img className="imageStudentwelfare" src={hc2} alt="imagehealthtwo" />
               </div>
               <div className="imagehealth">
-                <img className="imageStudentwelfare" src={hc3} alt="Image" />
+                <img className="imageStudentwelfare" src={hc3} alt="imagehealththree" />
               </div>
             </div>
             
@@ -165,25 +165,25 @@ function Studentwelfare() {
 
             <div className="text-of-studentwelfare">
               <div className="imagelibrary">
-                <img className="imageStudentwelfare" src={l1} alt="Image" />
+                <img className="imageStudentwelfare" src={l1} alt="imagelibraryone" />
                 <h3>STUDENTS NEWS PAPER SECTION</h3>
               </div>
               <div className="imagelibrary">
-                <img className="imageStudentwelfare" src={l2} alt="Image" />
+                <img className="imageStudentwelfare" src={l2} alt="imagelibrarytwo" />
                 <h3>STUDENTS READING SECTION</h3>
               </div>
             </div>
             <div className="text-of-studentwelfare">
               <div className="imagelibrary">
-                <img className="imageStudentwelfare" src={l3} alt="Image" />
+                <img className="imageStudentwelfare" src={l3} alt="imagelibrarythree" />
                 <h3>LIBRARY</h3>
               </div>
               <div className="imagelibrary">
-                <img className="imageStudentwelfare" src={l4} alt="Image" />
+                <img className="imageStudentwelfare" src={l4} alt="imagelibraryfour" />
                 <h3>UP COMPUTER LAB AND DIGITAL LIBRARY</h3>
               </div>
               <div className="imagelibrary">
-                <img className="imageStudentwelfare" src={l5} alt="Image" />
+                <img className="imageStudentwelfare" src={l5} alt="imagelibraryfive" />
                 <h3>PG COMPUTER LAB</h3>
               </div>
             </div>
@@ -243,40 +243,40 @@ function Studentwelfare() {
             </p>
             <div className="text-of-studentwelfare">
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n1} alt="Image" />
+                <img className="imageStudentwelfare" src={n1} alt="nssone" />
                 <h3>Clean and green programme</h3>
               </div>
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n2} alt="Image" />
+                <img className="imageStudentwelfare" src={n2} alt="nsstwo" />
                 <h3>Plantation of saplings</h3>
               </div>
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n8} alt="Image" />
+                <img className="imageStudentwelfare" src={n8} alt="nssthree" />
                 <h3>National unity day programme</h3>
               </div>
             </div>
             
             <div className="text-of-studentwelfare">
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n5} alt="Image" />
+                <img className="imageStudentwelfare" src={n5} alt="nssfour" />
                 <h3>Free medical health camp programme</h3>
               </div>
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n6} alt="Image" />
+                <img className="imageStudentwelfare" src={n6} alt="nssfive" />
                 <h3>Free veterniary health camp programme</h3>
               </div>
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n7} alt="Image" />
+                <img className="imageStudentwelfare" src={n7} alt="nsssix" />
                 <h3>Blood donation camp</h3>
               </div>
             </div>
             <div className="text-of-studentwelfare">
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n3} alt="Image" />
+                <img className="imageStudentwelfare" src={n3} alt="nssseven" />
                 <h3>Rally on “Yoga for Haumanity”</h3>
               </div>
               <div className="imageNSS">
-                <img className="imageStudentwelfare" src={n4} alt="Image" />
+                <img className="imageStudentwelfare" src={n4} alt="nsseight" />
                 <h3>International Yoga Day Proframme</h3>
               </div>
             </div>
@@ -430,11 +430,11 @@ function Studentwelfare() {
             </p>
             <div className="text-of-studentwelfare">
               <div className="imagesports">
-                <img className="imageStudentwelfare" src={c1} alt="Image" />
+                <img className="imageStudentwelfare" src={c1} alt="sportsone" />
                 <h3>Cultural Program in the College</h3>
               </div>
               <div className="imagesports">
-                <img className="imageStudentwelfare" src={c2} alt="Image" />
+                <img className="imageStudentwelfare" src={c2} alt="sportstwo" />
                 <h3>Cultural Program – Inter-Collegiate</h3>
               </div>
             </div>
@@ -452,20 +452,20 @@ function Studentwelfare() {
             </h3>
             <div className="text-of-studentwelfare">
             <div className="imagesportstable">
-                <img className="imageStudentwelfare" src={sp1} alt="Image" />
+                <img className="imageStudentwelfare" src={sp1} alt="sportstableone" />
               </div>
             </div>
             <div className="text-of-studentwelfare">
             <div className="imagesports">
-                <img className="imageStudentwelfare" src={sp2} alt="Image" />
+                <img className="imageStudentwelfare" src={sp2} alt="sportsthree" />
                 <h3>Basket Ball Court</h3>
               </div>
               <div className="imagesports">
-                <img className="imageStudentwelfare" src={sp3} alt="Image" />
+                <img className="imageStudentwelfare" src={sp3} alt="sportsfour" />
                 <h3>Volley Ball Court</h3>
               </div>
               <div className="imagesports">
-                <img className="imageStudentwelfare" src={sp4} alt="Image" />
+                <img className="imageStudentwelfare" src={sp4} alt="sportsfive" />
                 <h3>Open Gym Facilities</h3>
               </div>
             </div>

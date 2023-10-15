@@ -91,7 +91,7 @@ function Aboutus() {
                 </p>
               </div>
               <div className="image-container">
-                <img className="image ntrImg" src={img1} alt="Image" />
+                <img className="image ntrImg" src={img1} alt="ntrimage" />
               </div>
             </div>
             <p className="text_aboutus">
@@ -181,7 +181,7 @@ function Aboutus() {
               <li>Experimental plots & Fields :10.58 acres</li>
             </ul>
             <div className="image-container">
-              <img className="imageStructure" src={img2} alt="Image" />
+              <img className="imageStructure" src={img2} alt="imagestructure" />
             </div>
           </div>
         );
@@ -426,7 +426,7 @@ export default Aboutus;
 //                 </p>
 //               </div>
 //               <div className="image-container">
-//                 <img className="image" src={img1} alt="Image" />
+//                 <img className="image" src={img1} alt= />
 //               </div>
 //             </div>
 //             <p className="text_aboutus">

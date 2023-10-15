@@ -40,6 +40,9 @@ import NoticeBoardDetails from "./Pages/NoticeBoardDetails";
 import NoticeBoard from "./Pages/Noticeboard";
 import TendersPage from "./Pages/TendersPage";
 import Login from "./Login";
+import Gallery from "./Pages/Gallery";
+import ProfileView from "../src/Pages/ProfileView"
+
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -65,7 +68,8 @@ function App() {
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/individualPage" element={<IndividualDeansMessage />} />
         <Route path="/tendersPage/:id" element={<TendersPage />} />
-
+        <Route path="/gallery" element={<Gallery/>} />
+        <Route path="/profileView" element={<ProfileView/>} />
         <Route path="/noticeBoard" exact element={<NoticeBoard />} />
         <Route path="/noticeBoarddetails/:id" element={<NoticeBoardDetails />} />
       </Routes>

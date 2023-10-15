@@ -115,7 +115,7 @@ function Navbar() {
         className="HeaderImg"
         src={headerImg}
       />
-      <AppBar style={style} position="sticky">
+      <AppBar style={style} position="positionFixed">
         <Typography variant="h4" className={classes.logo}>
           {/* <img className={classes.logoImg} src={CollageLogo} alt="logo" /> */}
         </Typography>

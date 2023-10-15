@@ -36,7 +36,7 @@ const CareerDelete = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${api_url}career/${id}`);
+      await axios.delete(`${api_url}/career/${id}`);
       setDeletedItemId(id); // Store the ID of the deleted item to trigger animation
       fetchImages(); // Refresh the images after deletion
     } catch (error) {

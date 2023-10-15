@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { api_url } from '../App';
 import axios from 'axios';
+import "../components/Styles/Hiringpartners.scss"
 
 function Hiringpartners() {
   const [images, setImages] = useState([]);
@@ -24,7 +25,7 @@ function Hiringpartners() {
   };
 
   return (
-    <>
+    <div>
       <h1 className="Hiring-partners">Hiring Partners</h1>
       <div className="marquee">
         <div className="marquee-content">
@@ -35,7 +36,7 @@ function Hiringpartners() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

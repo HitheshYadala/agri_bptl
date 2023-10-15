@@ -5,10 +5,12 @@ import "react-image-lightbox/style.css";
 // import img1 from "../assets/Dean.png";
 // import img2 from "../assets/AssoDean.jpeg"
 import { images, CustomImage } from "./images";
+import { useNavigate } from 'react-router-dom';
 // import "../components/Styles/Hiringpartners.scss";
 import "../components/Styles/masionry.scss"
 export default function App() {
   const [index, setIndex] = useState(-1);
+  const navigate = useNavigate();
 
   const currentImage = images[index];
   const nextIndex = (index + 1) % images.length;
@@ -20,6 +22,11 @@ export default function App() {
   const handleClose = () => setIndex(-1);
   const handleMovePrev = () => setIndex(prevIndex);
   const handleMoveNext = () => setIndex(nextIndex);
+
+  const handleImageRout = () => {
+    navigate('/gallery');
+  }
+  
 
 
 
@@ -33,6 +40,7 @@ export default function App() {
           onClick={handleClick}
           enableImageSelection={false}
         />
+        <button style={{marginTop:"20px"}} onClick={() => handleImageRout()}>View more</button>
         {!!currentImage && (
           /* @ts-ignore */
           <Lightbox
