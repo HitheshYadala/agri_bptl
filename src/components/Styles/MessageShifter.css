@@ -56,6 +56,7 @@
 
 .user .user-details {
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 .user .username {
@@ -63,8 +64,10 @@
 }
 
 .user .role {
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 16px !important;
   margin: 10px 0;
+  color: orange;
 }
 
 .progress-bar {
@@ -76,6 +79,8 @@
 }
 .textp{
   font-size: 20px;
+  color:whitesmoke;
+  margin-top:40px
   
 }
 @keyframes grow {
@@ -101,21 +106,23 @@
   }
 
   .textp {
-    
-    
     display: block;
-    width: 100px;
-    overflow: hidden;
-    white-space: nowrap;
+    width: 100%;
+    /* overflow: hidden; */
+    white-space: wrap;
     text-overflow: ellipsis;
     /* margin-left: 20px !important; */
     margin-top: 1rem;
     margin-left: 10px;
   }
-  
+  .readMore{
+    /* margin:10px */
+    margin-top:20px !important;
+    margin-bottom:20px !important
+  }
   .user .user-image {
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
     margin-left: 30px;
   }
   
@@ -128,7 +135,7 @@
   }
 
   .user .role {
-    font-size: 12px;
+    font-size: 8px;
   }
 }
 
@@ -212,3 +219,8 @@
     /* margin:"auto" */
   }
 }
+
+
+
+
+

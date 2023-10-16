@@ -6,12 +6,29 @@ import "../components/Styles/SkillTraining.scss"
 function Skilldevelopment() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [dataFetched, setDataFetched] = useState(false)
+
+  const [reRenderCount, setReRenderCount] = useState(0);
 
   useEffect(() => {
+    if(!dataFetched){
     fetchImages();
+    }
+  }, [dataFetched]);
+
+
+  useEffect(() => {
+    if (dataFetched) {
+      if (images.length > 0) {
+        // Check if the notices array is not empty
+        console.log("Notices have been updated:");
+      }
+      setReRenderCount((prevCount) => prevCount + 1); // Increment re-render count
+    }
   }, []);
 
   const fetchImages = async () => {
+    console.log("Skill development called")
     try {
       const response = await axios.get(`${api_url}/training`);
       setImages(response.data);
@@ -19,6 +36,7 @@ function Skilldevelopment() {
 
       const partnerArr = response.data.map((item) => item.Image);
       setImages(partnerArr);
+      setDataFetched(true)
     } catch (error) {
       console.error('Error fetching Hiring partners:', error.message);
     }
@@ -31,7 +49,7 @@ function Skilldevelopment() {
         <div className="marquee-contenty">
           {images.map((item, index) => (
             <div className="marquee-itemy" key={index}>
-              <img src={`data:image/png;base64,${item}`} alt="" />
+              <img style={{width:"160px"}} src={`data:image/png;base64,${item}`} alt="skill develoement" />
             </div>
           ))}
         </div>

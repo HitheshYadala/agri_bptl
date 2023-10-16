@@ -59,7 +59,7 @@ function Messageshifter() {
         <div className="progress-bar"></div>
         <div className="fas fa-quote-left fa-quote"></div>
         <div className="fas fa-quote-right fa-quote"></div>
-        <h1>{who}</h1>
+        <h1 style={{color:"white"}}>{who}</h1>
 
         <div className="testimonal_wrapper">
           <p className="textp">
@@ -77,7 +77,8 @@ function Messageshifter() {
                   name
                 )}&position=${encodeURIComponent(position)}`,
               }}
-              style={{ color: "gray", textDecoration: "none", float: "right" }}
+              style={{ color: "orange", textDecoration: "none", float: "right", marginTop:"50px"}}
+              className="readMore"
             >
               Read more...
             </Link>

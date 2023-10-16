@@ -18,4 +18,13 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+
+  @media (max-width: 576px) {
+  .HeaderImg{
+    height: 8em !important; 
+    width: "100%";
+    padding: 2px
+  }
+}
   

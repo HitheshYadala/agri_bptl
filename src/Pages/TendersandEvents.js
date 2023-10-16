@@ -15,7 +15,12 @@ function TendersandEvents() {
   });
   const [isLoading, setIsLoading] = useState(true);
 
+  const [dataFetched, setDataFetched] = useState(false);
+
+  const [reRenderCount, setReRenderCount] = useState(0);
+
   const fetchData = async () => {
+    console.log("Tenders called");
     try {
       const [tendersResponse, examCalenderResponse, careersResponse] =
         await Promise.all([
@@ -31,20 +36,32 @@ function TendersandEvents() {
       });
 
       setIsLoading(false);
+      setDataFetched(true);
     } catch (error) {
       console.error("Error fetching data:", error.message);
     }
   };
 
   useEffect(() => {
-    fetchData(); // Fetch data when the component mounts
-    setSelected(activeButton)
+    if (!dataFetched) {
+      fetchData(); // Fetch data when the component mounts
+    }
+  }, [dataFetched]); // Empty dependency array ensures the effect runs only on the initial render
+
+  useEffect(() => {
+    if (dataFetched) {
+      if (allData.length > 0) {
+        // Check if the notices array is not empty
+        console.log("Notices have been updated:", typeof allData);
+      }
+      setReRenderCount((prevCount) => prevCount + 1); // Increment re-render count
+    }
   }, []);
 
   const handleButtonClick = (button) => {
     console.log("Button clicked:", button);
     setActiveButton(button);
-    setSelected(button)
+    setSelected(button);
   };
 
   const items = allData[activeButton]; // Get data for the active button
@@ -88,7 +105,7 @@ function TendersandEvents() {
               className={`raise raisebutton ${
                 activeButton === "examCalender" ? "active" : ""
               }`}
-              style={{ width: "33%" }}
+              style={{ width: "33%"}}
               onClick={() => handleButtonClick("examCalender")}
             >
               Exam Calendar
@@ -120,17 +137,22 @@ function TendersandEvents() {
                   fontWeight: "bold",
                   textShadow: "2px 4px 4px rgba(46, 91, 173, 0.6)",
                 }}
+
+                className="boxItems"
                 key={item._id}
               >
                 <Link
-                  style={{ cursor: "pointer", textDecoration: "none" }}
+                  style={{ cursor: "pointer", textDecoration: "none", marginTop:"10px" }}
                   to={{
-                    pathname: `/tendersPage/${item._id+"-"+selected}`,
+                    pathname: `/tendersPage/${item._id + "-" + selected}`,
                   }}
                 >
                   {item.Title}
                 </Link>
               </li>
+
+              
+              
             ))}
           </ul>
         </div>

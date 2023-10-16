@@ -136,7 +136,7 @@ $colors: (
   .raisebutton {
     background: #0A2451;
     border: 2px solid;
-    height: 50px;
+    height: 70px;
     font: inherit;
     line-height: 1;
     border-radius: 10px;
@@ -206,3 +206,12 @@ $colors: (
       height: auto; /* Allow the height to adjust proportionally */
     }
   }
+
+  @media (max-width: 576px) {
+  .boxItems{
+    margin-left: 20px !important;
+    overflow: hidden !important;
+    max-width: fit-content !important;
+    width: 90%;
+  }
+}

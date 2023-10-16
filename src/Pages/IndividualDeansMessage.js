@@ -14,15 +14,18 @@ function IndividualDeansMessage() {
 
 
   return (
+    <>
     <div className="theContainer">
         <h1 className='individualPage_headings'>{who}</h1>
       <img className="DeansImages" src={image} />
       <p className="Names">{name}</p>
         <p className="positions">{position}</p>
-      <p className="Deans_description">
-        {description}
-      </p>
+      
     </div>
+    <span className="Deans_description">
+        {description}
+      </span>
+    </>
   );
 }
 

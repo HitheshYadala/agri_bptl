@@ -8,10 +8,14 @@
 }
 
 .Deans_description{
-    width: 80%;
+    // width: 80% !important;
     margin: auto;
-    text-align: justify;
-    padding:50px
+    // text-align: justify;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left:150px;
+    padding-right: 150px;
+    position: absolute
 }
 
 .theContainer{
@@ -30,7 +34,7 @@
 
 .Names{
     text-align: center;
-    // padding-top: 50px;
+    padding-top: 20px;
     color: #0A2451;
     text-decoration: underline;
     text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
@@ -47,4 +51,23 @@
     letter-spacing: 5px;
     font-size:small;
     font-weight: bold;
+}
+
+
+@media (max-width: 576px) {
+    .DeansImages{
+        align-items: center;
+        width: 90%;
+        height: 400px;
+        // padding:50px 50px 10px 50px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .Deans_description{
+        width: 100%;
+        // margin: auto;
+        // text-align: justify;
+        padding:25px
+    }
 }

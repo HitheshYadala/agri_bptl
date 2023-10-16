@@ -11,11 +11,17 @@ const Landingcarousel = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [imgSet, setImgSet] = useState([]);
 
+  const [dataFetched, setDataFetched] = useState(false);
+  
+
   useEffect(() => {
-    fetchImages();
-  }, []);
+    if(!dataFetched){
+      fetchImages();
+    }
+  }, [dataFetched]);
 
   const fetchImages = async () => {
+    console.log("Landing carousel called")
     try {
       const response = await axios.get(`${api_url}/carousel`);
       setData(response.data);
@@ -25,6 +31,8 @@ const Landingcarousel = () => {
       setImgSet(imageArray);
 
       setIsLoading(false);
+
+      setDataFetched(true)
     } catch (error) {
       console.error("Error fetching images:", error.message);
     }
