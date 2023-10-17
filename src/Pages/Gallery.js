@@ -3,10 +3,10 @@ import axios from "axios";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import { api_url } from "../App";
-import "../components/Styles/photos.scss"
+import "../components/Styles/photos.scss";
 import "react-image-lightbox/style.css";
-import "../components/Styles/masionry.scss"
-
+import "../components/Styles/masionry.scss";
+import "../components/Styles/ImageGallery.css"; // Import a new CSS file for styling
 
 export default class ImageGallery extends Component {
   constructor(props) {
@@ -26,9 +26,10 @@ export default class ImageGallery extends Component {
       .get(`${api_url}/photogallery`)
       .then((response) => {
         const fetchedImages = response.data; // Replace with the actual response data structure
-        const dataUrls = fetchedImages.map((item) => this.base64ToDataUrl(item.Image));
-        this.setState({loading: false, images: dataUrls });
-       
+        const dataUrls = fetchedImages.map((item) =>
+          this.base64ToDataUrl(item.Image)
+        );
+        this.setState({ loading: false, images: dataUrls });
       })
       .catch((error) => {
         console.error("Error fetching images:", error);
@@ -43,12 +44,12 @@ export default class ImageGallery extends Component {
     const { photoIndex, isOpen, images } = this.state;
 
     return (
-      <div style={{margin:"4%"}}>
-         <div>
+      <div className="image-gallery-container">
+        <h1 className="photogallery-heading">Photo Gallery</h1>
         {this.state.loading ? (
-          <div>Loading...</div>
+          <div className="loading-message">Loading...</div>
         ) : images.length === 0 ? (
-          <div>No data found</div>
+          <div className="no-data-message">No data found</div>
         ) : (
           <div className="image-grid">
             {this.state.images.map((image, index) => (
@@ -61,28 +62,26 @@ export default class ImageGallery extends Component {
             ))}
           </div>
         )}
-      </div>
-<div className="lightBoxDiv"> 
         {isOpen && (
-          <Lightbox
-            style={{position : "absolute", Zindex:"1000"}}
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-            onCloseRequest={() => this.setState({ isOpen: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + images.length - 1) % images.length,
-              })
-            }
-            onMoveNextRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + 1) % images.length,
-              })
-            }
-          />
+          <div className="lightbox-div">
+            <Lightbox
+              mainSrc={images[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={() => this.setState({ isOpen: false })}
+              onMovePrevRequest={() =>
+                this.setState({
+                  photoIndex: (photoIndex + images.length - 1) % images.length,
+                })
+              }
+              onMoveNextRequest={() =>
+                this.setState({
+                  photoIndex: (photoIndex + 1) % images.length,
+                })
+              }
+            />
+          </div>
         )}
-        </div>
       </div>
     );
   }

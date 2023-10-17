@@ -78,8 +78,7 @@ const PhotogalleryUpload = () => {
       setIsLoading(false); // Stop loading
       setErrorMessage(`1. Upload .jpeg, .jpg, .png formats only.
       2. Enter all required fields (*).
-      3. Avoid image sizes more than 4mb.
-      4. Still facing issues? Contact the Developer.`);
+      3. Avoid image sizes more than 1mb.`);
       setShowErrorModal(true);
       console.error('Error uploading data:', error.message); 
       
@@ -128,7 +127,7 @@ const PhotogalleryUpload = () => {
       {showErrorModal &&  (
         <div className="Errormodal-overlay">
           <div className="Errprmodal-content">
-            <p style={{marginBottom:"35px"}}>{errorMessage}</p>
+            <p style={{marginBottom:"35px", color:"white"}}>{errorMessage}</p>
             <span className="Errormodal-close" onClick={() => setShowErrorModal(false)}>
               Close
             </span>

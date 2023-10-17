@@ -26,6 +26,8 @@ export default function App() {
   }
 
   return (
+
+
     <>
       <h1 className="photogalleryHeading">Photo Gallery</h1>
       <div className="gallery-container">
@@ -33,7 +35,10 @@ export default function App() {
           images={images.map(image => ({
             ...image,
             srcSet: `${image.thumbnail} 480w, ${image.src} 800w, ${image.original} 1200w`,
-            sizes: "(max-width: 480px) 100vw, (max-width: 800px) 50vw, 33vw"
+            sizes: "(max-width: 480px) 100vw, (max-width: 800px) 50vw, 33vw",
+            lazyLoad: true,
+            thumbnailWidth: 120,
+            thumbnailHeight: 120,
           }))}
           onClick={handleClick}
           enableImageSelection={false}
