@@ -1,15 +1,15 @@
 import { Image } from "react-grid-gallery";
-import img1 from "../assets/Gallery/Gallery1.JPG";
-import img2 from "../assets/Gallery/Gallery2.JPG";
-import img3 from "../assets/Gallery/Gallery3.JPG";
-import img4 from "../assets/Gallery/Gallery4.JPG";
-import img5 from "../assets/Gallery/Gallery5.JPG";
-import img6 from "../assets/Gallery/Gallery6.JPG";
-import img7 from "../assets/Gallery/Gallery7.JPG";
-import img8 from "../assets/Gallery/Gallery8.JPG";
-import img9 from "../assets/Gallery/Gallery9.JPG";
-import img10 from "../assets/Gallery/Gallery10.JPG";
-import img11 from "../assets/Gallery/Gallery11.JPG";
+import img1 from "../assets/Gallery/Gallery1.webp";
+import img2 from "../assets/Gallery/Gallery2.webp";
+import img3 from "../assets/Gallery/Gallery3.webp";
+import img4 from "../assets/Gallery/Gallery4.webp";
+import img5 from "../assets/Gallery/Gallery5.webp";
+import img6 from "../assets/Gallery/Gallery6.webp";
+import img7 from "../assets/Gallery/Gallery7.webp";
+import img8 from "../assets/Gallery/Gallery8.webp";
+import img9 from "../assets/Gallery/Gallery9.webp";
+import img10 from "../assets/Gallery/Gallery10.webp";
+import img11 from "../assets/Gallery/Gallery11.webp";
 // export interface CustomImage extends Image {
 //   original: string;
 // }

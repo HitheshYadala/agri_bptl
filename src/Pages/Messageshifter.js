@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../components/Styles/MessageShifter.css";
-import dean from "../assets/Dean.png";
-import assoDean from "../assets/AssoDean.jpeg";
+import dean from "../assets/Dean.webp";
+import assoDean from "../assets/AssoDean.webp";
 import { Link } from "react-router-dom";
 
 function Messageshifter() {

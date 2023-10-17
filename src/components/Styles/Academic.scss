@@ -99,8 +99,12 @@
   
   .text_academic {
     // margin-bottom: 20px;
-    font-size: 16px;
+    margin-bottom: 20px;
+    margin:16px;
     text-align: center;
+    max-width: 98% !important;
+    width: 98% !important;
+    margin: 10px !important
     
   }
 
@@ -218,6 +222,9 @@
         margin-bottom: 20px;
         margin:16px;
         text-align: center;
+        max-width: 98% !important;
+        width: 98% !important;
+        margin: 10px !important
       }
       .Academic{
         padding-bottom: 10px;

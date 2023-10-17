@@ -9,7 +9,7 @@ import "../components/Styles/masionry.scss"
 export default function App() {
   const [index, setIndex] = useState(-1);
   const navigate = useNavigate();
-
+ 
   const currentImage = images[index];
   const nextIndex = (index + 1) % images.length;
   const nextImage = images[nextIndex] || currentImage;
