@@ -62,7 +62,7 @@ function Messageshifter() {
         <h1 style={{color:"white"}}>{who}</h1>
 
         <div className="testimonal_wrapper">
-          <p className="textp">
+          <span className="textp">
             {text}
             {/* <p><a style={{color:"gray", textDecoration:"none", float:"right"}}href="#">Read more...</a></p> */}
 
@@ -82,7 +82,7 @@ function Messageshifter() {
             >
               Read more...
             </Link>
-          </p>
+          </ span>
           <div className="user">
             <img src={photo} alt="user" className="user-image" />
             <div className="user-details">

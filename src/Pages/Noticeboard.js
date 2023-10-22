@@ -35,8 +35,12 @@ const NoticeBoard = () => {
       setDataArr(allData);
 
       // Extract the titles and set them in the notices array
-      const noticeSet = allData.map((item) => item.Title);
+      const noticeSet = allData.map((item) => 
+      new Date(item.EndDate) > new Date() ? item : ""
+      );
+      
       setNotices(noticeSet);
+      // console.log("ITEM", noticeSet)
       setIsLoading(false);
 
       // Save notices in localStorage
@@ -49,7 +53,7 @@ const NoticeBoard = () => {
   return (
     <div className="notice-board-container">
       <h1 className="Hiring-partners">Notice Board</h1>
-      <div className="box">
+      <div className="">
         <marquee
           height="300"
           width="75%"
@@ -62,7 +66,7 @@ const NoticeBoard = () => {
           style={{ marginLeft: "50px", color: "#007CC7" }}
         >
           <ul>
-            {dataArr.map((item, index) => (
+            {notices.map((item, index) => (
               <li key={index}>
                 <Link style={{ textDecoration: "none", fontWeight: "bold", color: "orange" }} to={`/noticeBoarddetails/${item._id}`}>
                   {item.Title}

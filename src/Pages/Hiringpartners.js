@@ -28,7 +28,7 @@ function Hiringpartners() {
 
 
   const fetchImages = async () => {
-    console.log("Hiring Partners called")
+    // console.log("Hiring Partners called")
     try {
       const response = await axios.get(`${api_url}/hiringpartner`);
       setImages(response.data);

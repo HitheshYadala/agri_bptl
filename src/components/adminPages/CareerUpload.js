@@ -47,7 +47,7 @@ const CareerUpload = () => {
 
 
   const formDate = (data) =>{
-    console.log("FORMS",data)
+    console.log("FORMS")
   }
 
   const handleUpload = async () => {
@@ -70,7 +70,7 @@ const CareerUpload = () => {
 
       setIsLoading(false); // Stop loading
       setErrorMessage(''); // Clear any previous error
-      console.log(response.data);
+      // console.log(response.data);
       setSuccessMessage('Upload successful!');
       setShowSuccessModal(true)
       resetForm();

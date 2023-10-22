@@ -21,7 +21,7 @@ const Landingcarousel = () => {
   }, [dataFetched]);
 
   const fetchImages = async () => {
-    console.log("Landing carousel called")
+    // console.log("Landing carousel called")
     try {
       const response = await axios.get(`${api_url}/carousel`);
       setData(response.data);
@@ -38,9 +38,9 @@ const Landingcarousel = () => {
     }
   };
 
-  const imageDataHandler = (imageData) => {
-    console.log("ImageData ", imageData);
-  };
+  // const imageDataHandler = (imageData) => {
+  //   console.log("ImageData ", imageData);
+  // };
 
   return (
     <div className="main">

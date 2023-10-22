@@ -12,7 +12,6 @@ const CareerDelete = () => {
 
   useEffect(() => {
     fetchImages();
-    console.log(`${api_url}/career`)
   }, []);
 
   const fetchImages = async () => {

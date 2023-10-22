@@ -70,7 +70,7 @@ const PhotogalleryUpload = () => {
 
       setIsLoading(false); // Stop loading
       setErrorMessage(''); // Clear any previous error
-      console.log(response.data);
+      // console.log(response.data);
       setSuccessMessage('Upload successful!');
       setShowSuccessModal(true)
       resetForm();

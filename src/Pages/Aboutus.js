@@ -15,10 +15,10 @@ import { BiArrowToBottom, BiItalic, BiBuildings } from "react-icons/bi";
 import { BsFillHouseGearFill, BsFillTrophyFill } from "react-icons/bs";
 import { AiOutlineMedium, AiFillTrophy } from "react-icons/ai";
 
-const handleOpenPdf = (pdfUrl) => () => {
-  console.log(pdfUrl);
-  window.open(pdfUrl, "_blank");
-};
+// const handleOpenPdf = (pdfUrl) => () => {
+//   console.log(pdfUrl);
+//   window.open(pdfUrl, "_blank");
+// };
 
 function Aboutus() {
   const [selectedButton, setSelectedButton] = useState("button1");
@@ -29,7 +29,7 @@ function Aboutus() {
 
   //PDF VIEWER CODE
   const handleOpenPdf = (pdfUrl) => () => {
-    console.log(pdfUrl);
+    // console.log(pdfUrl);
     window.open(pdfUrl, "_blank");
   };
   //PDF VIEWER CODE ENDS
@@ -40,7 +40,7 @@ function Aboutus() {
         return (
           <div>
             <h2 className="sub_heading">Historical Background</h2>
-            <p className="text_aboutus">
+            <p className="text_aboutu">
               Achaya NG Ranga Agricultural University (earlier Andhra Pradesh
               Agricultural University) had started a 4-year B.Tech (Agril.
               Engg.) Degree Programme in the Department of Agricultural
@@ -68,7 +68,7 @@ function Aboutus() {
 
             <div className="text-with-image">
               <div className="text-container">
-                <p className="text_aboutus">
+                <p className="text_aboutu">
                   After shifting to the new campus, the College expanded rapidly
                   both academically and physically. Many infrastructural
                   facilities were added in terms of buildings and equipment for
@@ -114,7 +114,7 @@ function Aboutus() {
               Rama Rao the then Chief Minister of combined Andhra Pradesh and
               who was the person laid foundation stone for the College building.
             </p>
-            <p className="text_aboutus">
+            <p className="text_aboutu">
               Today, the Dr. NTR College of Agricultural Engineering (CAE) is
               widely recognized as the Center for Academic Excellence (CAE) in
               quality education; need based research and transfer of technology
@@ -122,7 +122,7 @@ function Aboutus() {
               spread over 25 acres with an infrastructure ranked among the best
               in the country and accredited by ICAR.
             </p>
-            <p className="text_aboutus">
+            <p className="text_aboutu">
               The courses being offered are based on ICAR’s V Deans’ Committee
               recommended syllabus to gear up towards equipping the students to
               meet the challenges that are being faced by the agricultural
@@ -135,7 +135,7 @@ function Aboutus() {
               quality education is the dedicated team of over twenty core
               faculty drawn from different specializations.
             </p>
-            <p className="text_aboutus">
+            <p className="text_aboutu">
               B.Tech. (Agricultural Engineering) degree programme is supported
               by 6 departments as follows:
             </p>
@@ -148,7 +148,7 @@ function Aboutus() {
               <li>F. Basic Engineering and Applied Sciences</li>
             </ul>
 
-            <p style={{ color: "orange" }} className="text_aboutus">
+            <p style={{ color: "orange" }} className="text_aboutu">
               Number of the students completed graduation from the College so
               far: <span style={{ color: "green" }}>1046</span>
             </p>
@@ -189,7 +189,7 @@ function Aboutus() {
         return (
           <div>
             <h2 className="sub_heading">Vision</h2>
-            <p className="text_aboutus">
+            <p className="text_aboutu">
               To make Dr NTR College of Agricultural Engineering, Bapatla an
               integrated center for academic excellence of agricultural
               engineering education known for its contribution to agriculture
@@ -197,7 +197,7 @@ function Aboutus() {
               farmers
             </p>
             <h2 className="sub_heading">Mandate</h2>
-            <p className="text_aboutus">
+            <p className="text_aboutu">
               To serve the farming community and enhance their quality of life
               through excellence in education, research, development and
               transfer of agricultural technologies

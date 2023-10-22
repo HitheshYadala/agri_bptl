@@ -66,8 +66,8 @@ const NoticeboardUpload = () => {
       });
         formData.append("descriptions", descriptions);
         formData.append("titles", titles);
-        formData.append("startDate", startDate);
-        formData.append("endDate", endDate);
+        formData.append("startDates", startDate);
+        formData.append("endDates", endDate);
         formData.append("link", link);
         formData.append("isNew", isNew.toString());
 

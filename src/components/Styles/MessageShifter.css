@@ -78,9 +78,14 @@
   transform-origin: left;
 }
 .textp{
-  font-size: 20px;
+  font-size: 20px !important;
   color:whitesmoke;
-  margin-top:40px
+  margin-top:40px;
+
+  /* font-size: 16px; */
+  /* color: #999; */
+  max-width: 70%;
+  /* margin: 0 auto; */
   
 }
 @keyframes grow {

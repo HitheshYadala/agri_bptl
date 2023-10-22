@@ -38,7 +38,7 @@ function Admission() {
   };
 
   const test = () => {
-    console.log("STAFF",images)
+    console.log("STAFF")
   }
 
 

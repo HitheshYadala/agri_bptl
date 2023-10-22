@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto;
   }
   
   .profile-image {
@@ -35,10 +36,10 @@
     color: #666; /* Adjust the text color */
   }
   
-  p {
-    font-size: 16px;
-    color: #999; /* Adjust the text color */
-    max-width: 400px; /* Limit the width of the description */
-    margin: 0 auto; /* Center the description */
-  }
+  // p {
+  //   font-size: 16px;
+  //   color: #999;
+  //   max-width: 400px;
+  //   margin: 0 auto;
+  // }
   

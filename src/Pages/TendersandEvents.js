@@ -7,27 +7,23 @@ import { api_url } from "../App";
 function TendersandEvents() {
   const [activeButton, setActiveButton] = useState("tenders");
   const [selected, setSelected] = useState("");
-
   const [allData, setAllData] = useState({
     tenders: [],
     examCalender: [],
     career: [],
   });
   const [isLoading, setIsLoading] = useState(true);
-
   const [dataFetched, setDataFetched] = useState(false);
-
   const [reRenderCount, setReRenderCount] = useState(0);
 
   const fetchData = async () => {
-    console.log("Tenders called");
+
     try {
-      const [tendersResponse, examCalenderResponse, careersResponse] =
-        await Promise.all([
-          axios.get(`${api_url}/tender`),
-          axios.get(`${api_url}/examcalender`),
-          axios.get(`${api_url}/career`),
-        ]);
+      const [tendersResponse, examCalenderResponse, careersResponse] = await Promise.all([
+        axios.get(`${api_url}/tender`),
+        axios.get(`${api_url}/examcalender`),
+        axios.get(`${api_url}/career`),
+      ]);
 
       setAllData({
         tenders: tendersResponse.data,
@@ -59,12 +55,18 @@ function TendersandEvents() {
   }, []);
 
   const handleButtonClick = (button) => {
-    console.log("Button clicked:", button);
+
     setActiveButton(button);
     setSelected(button);
   };
 
-  const items = allData[activeButton]; // Get data for the active button
+  // Filter items based on the end date
+  const currentDate = new Date(); // Current date
+
+  const items = allData[activeButton].filter((item) => {
+    const endDate = new Date(item.EndDate); // Convert item's end date to a Date object
+    return endDate > currentDate; // Include items with end date greater than the current date
+  });
 
   return (
     <>
@@ -137,12 +139,11 @@ function TendersandEvents() {
                   fontWeight: "bold",
                   textShadow: "2px 4px 4px rgba(46, 91, 173, 0.6)",
                 }}
-
                 className="boxItems"
                 key={item._id}
               >
                 <Link
-                  style={{ cursor: "pointer", textDecoration: "none", marginTop:"10px" }}
+                  style={{ cursor: "pointer", textDecoration: "none", marginTop: "10px" }}
                   to={{
                     pathname: `/tendersPage/${item._id + "-" + selected}`,
                   }}
@@ -150,9 +151,6 @@ function TendersandEvents() {
                   {item.Title}
                 </Link>
               </li>
-
-              
-              
             ))}
           </ul>
         </div>
