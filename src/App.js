@@ -104,7 +104,8 @@ function App() {
   );
 }
 
-export const api_url = "http://localhost:8000"
-
+export const api_url = 
 // "https://caebptbackendservices.onrender.com"
+
+"http://localhost:8000"
 export default App;

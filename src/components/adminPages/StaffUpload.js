@@ -13,6 +13,7 @@ const StaffUpload = () => {
   const [file, setFile] = useState(null);
   const [description, setDescription] = useState('');
   const [designation, setDesignation] = useState('');
+  const [department, setDepartment] = useState('')
   const [name, setName] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -21,7 +22,21 @@ const StaffUpload = () => {
   const [contact, setContact] = useState('');
   const [previewImage, setPreviewImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
- 
+
+    const [headings, setHeadings] = useState([]);
+  const [newHeading, setNewHeading] = useState('');
+  const [descriptions, setDescriptions] = useState([]);
+  const [newDescription, setNewDescription] = useState('');
+
+
+  const addEntry = () => {
+    if (newHeading.trim() !== '' && newDescription.trim() !== '') {
+      setHeadings([...headings, newHeading]);
+      setDescriptions([...descriptions, newDescription]);
+      setNewHeading('');
+      setNewDescription('');
+    }
+  };
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -62,6 +77,8 @@ const StaffUpload = () => {
   const handleUpload = async () => {
     try {
       setIsLoading(true); // Start loading
+      setHeadings([]);
+      setDescriptions([]);
         
       const formData = new FormData();
       formData.append('image', file);
@@ -73,6 +90,10 @@ const StaffUpload = () => {
       formData.append('dob', dob);
       formData.append('mailid', mailid);
       formData.append('contactnumber', contact);
+      formData.append('headings', headings); // Sending headings as JSON string
+      formData.append('descriptions', descriptions);
+      // formData.append('department', department);
+
       
       formDate(formData)
       const response = await axios.post(`${api_url}/staff`, formData, {
@@ -123,6 +144,12 @@ const StaffUpload = () => {
       />
       <input
         type="text"
+        placeholder="Department"
+        value={department}
+        onChange={(e) => setDepartment(e.target.value)}
+      />
+      <input
+        type="text"
         placeholder="Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
@@ -157,6 +184,35 @@ const StaffUpload = () => {
         value={contact}
         onChange={(e) => setContact(e.target.value)}
       />
+
+      <input
+        type="text"
+        placeholder="Heading"
+        value={newHeading}
+        onChange={(e) => setNewHeading(e.target.value)}
+      />
+      <textarea
+        style={{width:"90%", height:"100px"}}
+        placeholder="About Heading"
+        value={newDescription}
+        onChange={(e) => setNewDescription(e.target.value)}
+      />
+      <button onClick={addEntry}>Add Entry</button>
+
+      {/* Display added entries */}
+      {headings.length > 0 && (
+        <div className="table-of-contents">
+          <h2>Table of Contents</h2>
+          <ul>
+            {headings.map((heading, index) => (
+              <li key={index}>
+                <h3>{heading}</h3>
+                <p>{descriptions[index]}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {/* <label>
         Is New:
         <input type="checkbox" checked={isNew} onChange={() => setIsNew(!isNew)} />
